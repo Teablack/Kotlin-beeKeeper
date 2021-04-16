@@ -17,6 +17,9 @@ import com.example.beekeeper.R
 import com.google.android.gms.location.FusedLocationProviderClient
 import com.google.android.gms.location.LocationServices
 import android.content.Intent
+import android.widget.EditText
+import androidx.navigation.fragment.findNavController
+import com.example.beekeeper.model.Weather
 import okhttp3.*
 import org.json.JSONArray
 import org.json.JSONObject
@@ -27,6 +30,12 @@ class HomeFragment : Fragment() {
     private var latitude: Double? = null
     private var longitude: Double? = null
     val client = OkHttpClient()
+
+//    lateinit var timezone: TextView ;
+//    lateinit var temp: TextView ;
+//    lateinit var pressure: TextView ;
+//    lateinit var wind_speed: TextView ;
+
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -49,27 +58,20 @@ class HomeFragment : Fragment() {
             override fun onResponse(call: Call, response: Response) {
                 var str_response = response.body()!!.string()
 
+                //creating json object
+                val json_contact:JSONObject = JSONObject(str_response)
                 //creating json array
-                val jsonarray_info:JSONArray = JSONArray (str_response)
 
-                var size:Int = jsonarray_info.length()
-//                arrayList_details= ArrayList();
-//                for (i in 0.. size-1) {
-//                    var json_objectdetail:JSONObject=jsonarray_info.getJSONObject(i)
-//                    var userInfo:UserInfo= UserInfo();
-//                    userInfo.id=json_objectdetail.getString("id")
-//                    userInfo.name=json_objectdetail.getString("name")
-//                    userInfo.email=json_objectdetail.getString("email")
-//                    arrayList_details.add(userInfo)
-//                }
-//
-//                runOnUiThread {
-//                    //stuff that updates ui
-//                    val obj_adapter : UserAdapter
-//                    obj_adapter = UserAdapter(applicationContext,arrayList_details)
-//                    listView_details.adapter=obj_adapter
-//
-//                }
+                var json_timezone:String= json_contact.getString("timezone")
+                var json_objectdetail:JSONObject=json_contact.getJSONObject("current")
+                Log.d("TAG", json_timezone)
+                Log.d("TAG", json_objectdetail.toString())
+                var model:Weather= Weather();
+                model.temp=json_objectdetail.getString("temp")
+                model.pressure=json_objectdetail.getString("pressure")
+                model.wind_speed=json_objectdetail.getString("wind_speed")
+
+
             }
         })
 
@@ -93,7 +95,7 @@ class HomeFragment : Fragment() {
                     longitude = location?.longitude
                     Log.d("TAGG", longitude.toString())
                     Log.d("TAGG", latitude.toString())
-                    run("https://api.openweathermap.org/data/2.5/onecall?lat=latitude&lon=longitude&appid=c89b7c4ee007d027409f973ffb7ab2e1")
+                    run("https://api.openweathermap.org/data/2.5/onecall?lat=$latitude&lon=$longitude&appid=c89b7c4ee007d027409f973ffb7ab2e1")
                 }
     }
 

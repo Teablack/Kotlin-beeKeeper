@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "C:\\Users\\Daria\\AndroidStudioProjects\\BeeKeeper\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-fr-rCA\\values-fr-rCA.xml",
+            "outputFile": "C:\\Users\\Daria\\Desktop\\git\\Kotlin-beeKeeper\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-fr-rCA\\values-fr-rCA.xml",
             "map": [
                 {
                     "source": "C:\\Users\\Daria\\.gradle\\caches\\transforms-2\\files-2.1\\f52c80684120c0271e5b122890277bf0\\jetified-play-services-basement-17.0.0\\res\\values-fr-rCA\\values.xml",

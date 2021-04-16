@@ -1,27 +1,8 @@
 {
     "logs": [
         {
-            "outputFile": "C:\\Users\\Daria\\AndroidStudioProjects\\BeeKeeper\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-night-v8\\values-night-v8.xml",
+            "outputFile": "C:\\Users\\Daria\\Desktop\\git\\Kotlin-beeKeeper\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-night-v8\\values-night-v8.xml",
             "map": [
-                {
-                    "source": "C:\\Users\\Daria\\AndroidStudioProjects\\BeeKeeper\\app\\src\\main\\res\\values-night\\themes.xml",
-                    "from": {
-                        "startLines": "2,16",
-                        "startColumns": "4,4",
-                        "startOffsets": "102,840",
-                        "endLines": "14,19",
-                        "endColumns": "12,12",
-                        "endOffsets": "832,1070"
-                    },
-                    "to": {
-                        "startLines": "9,39",
-                        "startColumns": "4,4",
-                        "startOffsets": "732,3404",
-                        "endLines": "21,42",
-                        "endColumns": "12,12",
-                        "endOffsets": "1448,3631"
-                    }
-                },
                 {
                     "source": "C:\\Users\\Daria\\.gradle\\caches\\transforms-2\\files-2.1\\4102c377b7a8a929cfb8c6bcf858d486\\appcompat-1.2.0\\res\\values-night-v8\\values-night-v8.xml",
                     "from": {
@@ -37,6 +18,25 @@
                         "startOffsets": "100,170,254,338,434,536,638,3315",
                         "endColumns": "69,83,83,95,101,101,93,88",
                         "endOffsets": "165,249,333,429,531,633,727,3399"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\Daria\\Desktop\\git\\Kotlin-beeKeeper\\app\\src\\main\\res\\values-night\\themes.xml",
+                    "from": {
+                        "startLines": "2,16",
+                        "startColumns": "4,4",
+                        "startOffsets": "102,840",
+                        "endLines": "14,19",
+                        "endColumns": "12,12",
+                        "endOffsets": "832,1070"
+                    },
+                    "to": {
+                        "startLines": "9,39",
+                        "startColumns": "4,4",
+                        "startOffsets": "732,3404",
+                        "endLines": "21,42",
+                        "endColumns": "12,12",
+                        "endOffsets": "1448,3631"
                     }
                 },
                 {

@@ -1,9 +1,9 @@
 -- Merging decision tree log ---
 manifest
-ADDED from C:\Users\Daria\AndroidStudioProjects\BeeKeeper\app\src\main\AndroidManifest.xml:2:1-35:12
-INJECTED from C:\Users\Daria\AndroidStudioProjects\BeeKeeper\app\src\main\AndroidManifest.xml:2:1-35:12
-INJECTED from C:\Users\Daria\AndroidStudioProjects\BeeKeeper\app\src\main\AndroidManifest.xml:2:1-35:12
-INJECTED from C:\Users\Daria\AndroidStudioProjects\BeeKeeper\app\src\main\AndroidManifest.xml:2:1-35:12
+ADDED from C:\Users\Daria\Desktop\git\Kotlin-beeKeeper\app\src\main\AndroidManifest.xml:2:1-35:12
+INJECTED from C:\Users\Daria\Desktop\git\Kotlin-beeKeeper\app\src\main\AndroidManifest.xml:2:1-35:12
+INJECTED from C:\Users\Daria\Desktop\git\Kotlin-beeKeeper\app\src\main\AndroidManifest.xml:2:1-35:12
+INJECTED from C:\Users\Daria\Desktop\git\Kotlin-beeKeeper\app\src\main\AndroidManifest.xml:2:1-35:12
 MERGED from [androidx.navigation:navigation-fragment-ktx:2.3.4] C:\Users\Daria\.gradle\caches\transforms-2\files-2.1\0da47bda4cd4c44428c8c878a9a506d3\navigation-fragment-ktx-2.3.4\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.fragment:fragment-ktx:1.2.4] C:\Users\Daria\.gradle\caches\transforms-2\files-2.1\74de3afeb51b26b668059b87ea038f02\jetified-fragment-ktx-1.2.4\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.navigation:navigation-ui-ktx:2.3.4] C:\Users\Daria\.gradle\caches\transforms-2\files-2.1\2d3c611c240e1bc98c9f3c1cb20d3d1e\navigation-ui-ktx-2.3.4\AndroidManifest.xml:17:1-24:12
@@ -58,45 +58,45 @@ MERGED from [androidx.documentfile:documentfile:1.0.0] C:\Users\Daria\.gradle\ca
 MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] C:\Users\Daria\.gradle\caches\transforms-2\files-2.1\4b393030b2c2e1fa1433125869d155cc\localbroadcastmanager-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.print:print:1.0.0] C:\Users\Daria\.gradle\caches\transforms-2\files-2.1\593a6423820f52e07f5cf586ae902042\print-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.annotation:annotation-experimental:1.0.0] C:\Users\Daria\.gradle\caches\transforms-2\files-2.1\0aaff4fb6b8684e27d7e3963216ee549\jetified-annotation-experimental-1.0.0\AndroidManifest.xml:17:1-24:12
-INJECTED from C:\Users\Daria\AndroidStudioProjects\BeeKeeper\app\src\main\AndroidManifest.xml:2:1-35:12
-INJECTED from C:\Users\Daria\AndroidStudioProjects\BeeKeeper\app\src\main\AndroidManifest.xml:2:1-35:12
-INJECTED from C:\Users\Daria\AndroidStudioProjects\BeeKeeper\app\src\main\AndroidManifest.xml:2:1-35:12
+INJECTED from C:\Users\Daria\Desktop\git\Kotlin-beeKeeper\app\src\main\AndroidManifest.xml:2:1-35:12
+INJECTED from C:\Users\Daria\Desktop\git\Kotlin-beeKeeper\app\src\main\AndroidManifest.xml:2:1-35:12
+INJECTED from C:\Users\Daria\Desktop\git\Kotlin-beeKeeper\app\src\main\AndroidManifest.xml:2:1-35:12
 	package
-		ADDED from C:\Users\Daria\AndroidStudioProjects\BeeKeeper\app\src\main\AndroidManifest.xml:3:5-36
-		INJECTED from C:\Users\Daria\AndroidStudioProjects\BeeKeeper\app\src\main\AndroidManifest.xml
-		INJECTED from C:\Users\Daria\AndroidStudioProjects\BeeKeeper\app\src\main\AndroidManifest.xml
+		ADDED from C:\Users\Daria\Desktop\git\Kotlin-beeKeeper\app\src\main\AndroidManifest.xml:3:5-36
+		INJECTED from C:\Users\Daria\Desktop\git\Kotlin-beeKeeper\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\Daria\Desktop\git\Kotlin-beeKeeper\app\src\main\AndroidManifest.xml
 	android:versionName
-		INJECTED from C:\Users\Daria\AndroidStudioProjects\BeeKeeper\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\Daria\AndroidStudioProjects\BeeKeeper\app\src\main\AndroidManifest.xml:2:1-35:12
-		INJECTED from C:\Users\Daria\AndroidStudioProjects\BeeKeeper\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\Daria\Desktop\git\Kotlin-beeKeeper\app\src\main\AndroidManifest.xml
+		ADDED from C:\Users\Daria\Desktop\git\Kotlin-beeKeeper\app\src\main\AndroidManifest.xml:2:1-35:12
+		INJECTED from C:\Users\Daria\Desktop\git\Kotlin-beeKeeper\app\src\main\AndroidManifest.xml
 	android:versionCode
-		INJECTED from C:\Users\Daria\AndroidStudioProjects\BeeKeeper\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\Daria\AndroidStudioProjects\BeeKeeper\app\src\main\AndroidManifest.xml:2:1-35:12
-		INJECTED from C:\Users\Daria\AndroidStudioProjects\BeeKeeper\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\Daria\Desktop\git\Kotlin-beeKeeper\app\src\main\AndroidManifest.xml
+		ADDED from C:\Users\Daria\Desktop\git\Kotlin-beeKeeper\app\src\main\AndroidManifest.xml:2:1-35:12
+		INJECTED from C:\Users\Daria\Desktop\git\Kotlin-beeKeeper\app\src\main\AndroidManifest.xml
 	xmlns:android
-		ADDED from C:\Users\Daria\AndroidStudioProjects\BeeKeeper\app\src\main\AndroidManifest.xml:2:11-69
+		ADDED from C:\Users\Daria\Desktop\git\Kotlin-beeKeeper\app\src\main\AndroidManifest.xml:2:11-69
 uses-permission#android.permission.ACCESS_FINE_LOCATION
-ADDED from C:\Users\Daria\AndroidStudioProjects\BeeKeeper\app\src\main\AndroidManifest.xml:4:5-79
+ADDED from C:\Users\Daria\Desktop\git\Kotlin-beeKeeper\app\src\main\AndroidManifest.xml:4:5-79
 	android:name
-		ADDED from C:\Users\Daria\AndroidStudioProjects\BeeKeeper\app\src\main\AndroidManifest.xml:4:22-76
+		ADDED from C:\Users\Daria\Desktop\git\Kotlin-beeKeeper\app\src\main\AndroidManifest.xml:4:22-76
 uses-permission#android.permission.ACCESS_COARSE_LOCATION
-ADDED from C:\Users\Daria\AndroidStudioProjects\BeeKeeper\app\src\main\AndroidManifest.xml:5:5-81
+ADDED from C:\Users\Daria\Desktop\git\Kotlin-beeKeeper\app\src\main\AndroidManifest.xml:5:5-81
 	android:name
-		ADDED from C:\Users\Daria\AndroidStudioProjects\BeeKeeper\app\src\main\AndroidManifest.xml:5:22-78
+		ADDED from C:\Users\Daria\Desktop\git\Kotlin-beeKeeper\app\src\main\AndroidManifest.xml:5:22-78
 uses-permission#android.permission.ACTIVITY_RECOGNITION
-ADDED from C:\Users\Daria\AndroidStudioProjects\BeeKeeper\app\src\main\AndroidManifest.xml:6:5-79
+ADDED from C:\Users\Daria\Desktop\git\Kotlin-beeKeeper\app\src\main\AndroidManifest.xml:6:5-79
 	android:name
-		ADDED from C:\Users\Daria\AndroidStudioProjects\BeeKeeper\app\src\main\AndroidManifest.xml:6:22-76
+		ADDED from C:\Users\Daria\Desktop\git\Kotlin-beeKeeper\app\src\main\AndroidManifest.xml:6:22-76
 uses-permission#android.permission.ACCESS_NETWORK_STATE
-ADDED from C:\Users\Daria\AndroidStudioProjects\BeeKeeper\app\src\main\AndroidManifest.xml:7:5-79
+ADDED from C:\Users\Daria\Desktop\git\Kotlin-beeKeeper\app\src\main\AndroidManifest.xml:7:5-79
 	android:name
-		ADDED from C:\Users\Daria\AndroidStudioProjects\BeeKeeper\app\src\main\AndroidManifest.xml:7:22-76
+		ADDED from C:\Users\Daria\Desktop\git\Kotlin-beeKeeper\app\src\main\AndroidManifest.xml:7:22-76
 uses-permission#android.permission.INTERNET
-ADDED from C:\Users\Daria\AndroidStudioProjects\BeeKeeper\app\src\main\AndroidManifest.xml:8:5-67
+ADDED from C:\Users\Daria\Desktop\git\Kotlin-beeKeeper\app\src\main\AndroidManifest.xml:8:5-67
 	android:name
-		ADDED from C:\Users\Daria\AndroidStudioProjects\BeeKeeper\app\src\main\AndroidManifest.xml:8:22-64
+		ADDED from C:\Users\Daria\Desktop\git\Kotlin-beeKeeper\app\src\main\AndroidManifest.xml:8:22-64
 application
-ADDED from C:\Users\Daria\AndroidStudioProjects\BeeKeeper\app\src\main\AndroidManifest.xml:10:5-33:19
+ADDED from C:\Users\Daria\Desktop\git\Kotlin-beeKeeper\app\src\main\AndroidManifest.xml:10:5-33:19
 MERGED from [com.google.android.material:material:1.3.0] C:\Users\Daria\.gradle\caches\transforms-2\files-2.1\10a1fd9a43e78ddadba51799567f760e\material-1.3.0\AndroidManifest.xml:22:5-20
 MERGED from [com.google.android.material:material:1.3.0] C:\Users\Daria\.gradle\caches\transforms-2\files-2.1\10a1fd9a43e78ddadba51799567f760e\material-1.3.0\AndroidManifest.xml:22:5-20
 MERGED from [androidx.constraintlayout:constraintlayout:2.0.4] C:\Users\Daria\.gradle\caches\transforms-2\files-2.1\ab75dfbbd723f28d9ab1c4d69d43602e\constraintlayout-2.0.4\AndroidManifest.xml:9:5-20
@@ -118,53 +118,53 @@ MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] C:\Users\Da
 	android:appComponentFactory
 		ADDED from [androidx.core:core:1.3.2] C:\Users\Daria\.gradle\caches\transforms-2\files-2.1\f4726924add2327517ec5f23b6aa3aba\core-1.3.2\AndroidManifest.xml:24:18-86
 	android:supportsRtl
-		ADDED from C:\Users\Daria\AndroidStudioProjects\BeeKeeper\app\src\main\AndroidManifest.xml:15:9-35
+		ADDED from C:\Users\Daria\Desktop\git\Kotlin-beeKeeper\app\src\main\AndroidManifest.xml:15:9-35
 	android:label
-		ADDED from C:\Users\Daria\AndroidStudioProjects\BeeKeeper\app\src\main\AndroidManifest.xml:13:9-41
+		ADDED from C:\Users\Daria\Desktop\git\Kotlin-beeKeeper\app\src\main\AndroidManifest.xml:13:9-41
 	android:roundIcon
-		ADDED from C:\Users\Daria\AndroidStudioProjects\BeeKeeper\app\src\main\AndroidManifest.xml:14:9-54
+		ADDED from C:\Users\Daria\Desktop\git\Kotlin-beeKeeper\app\src\main\AndroidManifest.xml:14:9-54
 	android:icon
-		ADDED from C:\Users\Daria\AndroidStudioProjects\BeeKeeper\app\src\main\AndroidManifest.xml:12:9-43
+		ADDED from C:\Users\Daria\Desktop\git\Kotlin-beeKeeper\app\src\main\AndroidManifest.xml:12:9-43
 	android:allowBackup
-		ADDED from C:\Users\Daria\AndroidStudioProjects\BeeKeeper\app\src\main\AndroidManifest.xml:11:9-35
+		ADDED from C:\Users\Daria\Desktop\git\Kotlin-beeKeeper\app\src\main\AndroidManifest.xml:11:9-35
 	android:theme
-		ADDED from C:\Users\Daria\AndroidStudioProjects\BeeKeeper\app\src\main\AndroidManifest.xml:16:9-47
+		ADDED from C:\Users\Daria\Desktop\git\Kotlin-beeKeeper\app\src\main\AndroidManifest.xml:16:9-47
 activity#com.example.beekeeper.MainActivity
-ADDED from C:\Users\Daria\AndroidStudioProjects\BeeKeeper\app\src\main\AndroidManifest.xml:17:9-20:75
+ADDED from C:\Users\Daria\Desktop\git\Kotlin-beeKeeper\app\src\main\AndroidManifest.xml:17:9-20:75
 	android:label
-		ADDED from C:\Users\Daria\AndroidStudioProjects\BeeKeeper\app\src\main\AndroidManifest.xml:19:13-56
+		ADDED from C:\Users\Daria\Desktop\git\Kotlin-beeKeeper\app\src\main\AndroidManifest.xml:19:13-56
 	android:theme
-		ADDED from C:\Users\Daria\AndroidStudioProjects\BeeKeeper\app\src\main\AndroidManifest.xml:20:13-63
+		ADDED from C:\Users\Daria\Desktop\git\Kotlin-beeKeeper\app\src\main\AndroidManifest.xml:20:13-63
 	android:name
-		ADDED from C:\Users\Daria\AndroidStudioProjects\BeeKeeper\app\src\main\AndroidManifest.xml:18:13-41
+		ADDED from C:\Users\Daria\Desktop\git\Kotlin-beeKeeper\app\src\main\AndroidManifest.xml:18:13-41
 activity#com.example.beekeeper.login.LoginActivity
-ADDED from C:\Users\Daria\AndroidStudioProjects\BeeKeeper\app\src\main\AndroidManifest.xml:21:9-57
+ADDED from C:\Users\Daria\Desktop\git\Kotlin-beeKeeper\app\src\main\AndroidManifest.xml:21:9-57
 	android:name
-		ADDED from C:\Users\Daria\AndroidStudioProjects\BeeKeeper\app\src\main\AndroidManifest.xml:21:19-54
+		ADDED from C:\Users\Daria\Desktop\git\Kotlin-beeKeeper\app\src\main\AndroidManifest.xml:21:19-54
 activity#com.example.beekeeper.FullscreenActivity
-ADDED from C:\Users\Daria\AndroidStudioProjects\BeeKeeper\app\src\main\AndroidManifest.xml:22:9-32:20
+ADDED from C:\Users\Daria\Desktop\git\Kotlin-beeKeeper\app\src\main\AndroidManifest.xml:22:9-32:20
 	android:label
-		ADDED from C:\Users\Daria\AndroidStudioProjects\BeeKeeper\app\src\main\AndroidManifest.xml:25:13-45
+		ADDED from C:\Users\Daria\Desktop\git\Kotlin-beeKeeper\app\src\main\AndroidManifest.xml:25:13-45
 	android:configChanges
-		ADDED from C:\Users\Daria\AndroidStudioProjects\BeeKeeper\app\src\main\AndroidManifest.xml:24:13-74
+		ADDED from C:\Users\Daria\Desktop\git\Kotlin-beeKeeper\app\src\main\AndroidManifest.xml:24:13-74
 	android:theme
-		ADDED from C:\Users\Daria\AndroidStudioProjects\BeeKeeper\app\src\main\AndroidManifest.xml:26:13-62
+		ADDED from C:\Users\Daria\Desktop\git\Kotlin-beeKeeper\app\src\main\AndroidManifest.xml:26:13-62
 	android:name
-		ADDED from C:\Users\Daria\AndroidStudioProjects\BeeKeeper\app\src\main\AndroidManifest.xml:23:13-47
+		ADDED from C:\Users\Daria\Desktop\git\Kotlin-beeKeeper\app\src\main\AndroidManifest.xml:23:13-47
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
-ADDED from C:\Users\Daria\AndroidStudioProjects\BeeKeeper\app\src\main\AndroidManifest.xml:27:13-31:29
+ADDED from C:\Users\Daria\Desktop\git\Kotlin-beeKeeper\app\src\main\AndroidManifest.xml:27:13-31:29
 action#android.intent.action.MAIN
-ADDED from C:\Users\Daria\AndroidStudioProjects\BeeKeeper\app\src\main\AndroidManifest.xml:28:17-69
+ADDED from C:\Users\Daria\Desktop\git\Kotlin-beeKeeper\app\src\main\AndroidManifest.xml:28:17-69
 	android:name
-		ADDED from C:\Users\Daria\AndroidStudioProjects\BeeKeeper\app\src\main\AndroidManifest.xml:28:25-66
+		ADDED from C:\Users\Daria\Desktop\git\Kotlin-beeKeeper\app\src\main\AndroidManifest.xml:28:25-66
 category#android.intent.category.LAUNCHER
-ADDED from C:\Users\Daria\AndroidStudioProjects\BeeKeeper\app\src\main\AndroidManifest.xml:30:17-77
+ADDED from C:\Users\Daria\Desktop\git\Kotlin-beeKeeper\app\src\main\AndroidManifest.xml:30:17-77
 	android:name
-		ADDED from C:\Users\Daria\AndroidStudioProjects\BeeKeeper\app\src\main\AndroidManifest.xml:30:27-74
+		ADDED from C:\Users\Daria\Desktop\git\Kotlin-beeKeeper\app\src\main\AndroidManifest.xml:30:27-74
 uses-sdk
-INJECTED from C:\Users\Daria\AndroidStudioProjects\BeeKeeper\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
-INJECTED from C:\Users\Daria\AndroidStudioProjects\BeeKeeper\app\src\main\AndroidManifest.xml
-INJECTED from C:\Users\Daria\AndroidStudioProjects\BeeKeeper\app\src\main\AndroidManifest.xml
+INJECTED from C:\Users\Daria\Desktop\git\Kotlin-beeKeeper\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from C:\Users\Daria\Desktop\git\Kotlin-beeKeeper\app\src\main\AndroidManifest.xml
+INJECTED from C:\Users\Daria\Desktop\git\Kotlin-beeKeeper\app\src\main\AndroidManifest.xml
 MERGED from [androidx.navigation:navigation-fragment-ktx:2.3.4] C:\Users\Daria\.gradle\caches\transforms-2\files-2.1\0da47bda4cd4c44428c8c878a9a506d3\navigation-fragment-ktx-2.3.4\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.navigation:navigation-fragment-ktx:2.3.4] C:\Users\Daria\.gradle\caches\transforms-2\files-2.1\0da47bda4cd4c44428c8c878a9a506d3\navigation-fragment-ktx-2.3.4\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.fragment:fragment-ktx:1.2.4] C:\Users\Daria\.gradle\caches\transforms-2\files-2.1\74de3afeb51b26b668059b87ea038f02\jetified-fragment-ktx-1.2.4\AndroidManifest.xml:20:5-22:41
@@ -273,16 +273,16 @@ MERGED from [androidx.print:print:1.0.0] C:\Users\Daria\.gradle\caches\transform
 MERGED from [androidx.print:print:1.0.0] C:\Users\Daria\.gradle\caches\transforms-2\files-2.1\593a6423820f52e07f5cf586ae902042\print-1.0.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.annotation:annotation-experimental:1.0.0] C:\Users\Daria\.gradle\caches\transforms-2\files-2.1\0aaff4fb6b8684e27d7e3963216ee549\jetified-annotation-experimental-1.0.0\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.annotation:annotation-experimental:1.0.0] C:\Users\Daria\.gradle\caches\transforms-2\files-2.1\0aaff4fb6b8684e27d7e3963216ee549\jetified-annotation-experimental-1.0.0\AndroidManifest.xml:20:5-22:41
-INJECTED from C:\Users\Daria\AndroidStudioProjects\BeeKeeper\app\src\main\AndroidManifest.xml
-INJECTED from C:\Users\Daria\AndroidStudioProjects\BeeKeeper\app\src\main\AndroidManifest.xml
+INJECTED from C:\Users\Daria\Desktop\git\Kotlin-beeKeeper\app\src\main\AndroidManifest.xml
+INJECTED from C:\Users\Daria\Desktop\git\Kotlin-beeKeeper\app\src\main\AndroidManifest.xml
 	android:targetSdkVersion
-		INJECTED from C:\Users\Daria\AndroidStudioProjects\BeeKeeper\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\Daria\AndroidStudioProjects\BeeKeeper\app\src\main\AndroidManifest.xml
-		INJECTED from C:\Users\Daria\AndroidStudioProjects\BeeKeeper\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\Daria\Desktop\git\Kotlin-beeKeeper\app\src\main\AndroidManifest.xml
+		ADDED from C:\Users\Daria\Desktop\git\Kotlin-beeKeeper\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\Daria\Desktop\git\Kotlin-beeKeeper\app\src\main\AndroidManifest.xml
 	android:minSdkVersion
-		INJECTED from C:\Users\Daria\AndroidStudioProjects\BeeKeeper\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\Daria\AndroidStudioProjects\BeeKeeper\app\src\main\AndroidManifest.xml
-		INJECTED from C:\Users\Daria\AndroidStudioProjects\BeeKeeper\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\Daria\Desktop\git\Kotlin-beeKeeper\app\src\main\AndroidManifest.xml
+		ADDED from C:\Users\Daria\Desktop\git\Kotlin-beeKeeper\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\Daria\Desktop\git\Kotlin-beeKeeper\app\src\main\AndroidManifest.xml
 activity#com.google.android.gms.common.api.GoogleApiActivity
 ADDED from [com.google.android.gms:play-services-base:17.0.0] C:\Users\Daria\.gradle\caches\transforms-2\files-2.1\cdf864275c184c60f06f04cb3ac23c07\jetified-play-services-base-17.0.0\AndroidManifest.xml:23:9-26:75
 	android:exported

@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "C:\\Users\\Daria\\AndroidStudioProjects\\BeeKeeper\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-et\\values-et.xml",
+            "outputFile": "C:\\Users\\Daria\\Desktop\\git\\Kotlin-beeKeeper\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-et\\values-et.xml",
             "map": [
                 {
                     "source": "C:\\Users\\Daria\\.gradle\\caches\\transforms-2\\files-2.1\\0470ce5f484e08856ea008949e53819c\\navigation-ui-2.3.4\\res\\values-et\\values-et.xml",
