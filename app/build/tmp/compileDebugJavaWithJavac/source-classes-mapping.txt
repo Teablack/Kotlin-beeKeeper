@@ -1,0 +1,2 @@
+com/example/beekeeper/BuildConfig.java
+ com.example.beekeeper.BuildConfig
