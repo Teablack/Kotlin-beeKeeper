@@ -18,16 +18,27 @@ class DBHelper(var context: Context) : SQLiteOpenHelper(
         private val COL_ID = "userID"
         private val COL_USERNAME = "userName"
         private val COL_PASSWORD = "password"
+
+        private val TABLE2_NAME = "Apriary"
+        private val COL_AP_ID = "apriaryID"
+        private val COL_NAME = "apriaryName"
+        private val COL_LOCALIZATION = "localization"
     }
 
     override fun onCreate(db: SQLiteDatabase?) {
         val CREATE_TABLE_QUERY =
             ("CREATE TABLE $TABLE_NAME ($COL_ID INTEGER PRIMARY KEY AUTOINCREMENT, $COL_USERNAME TEXT UNIQUE, $COL_PASSWORD TEXT )")
         db!!.execSQL(CREATE_TABLE_QUERY)
+        val CREATE_TABLE2_QUERY =
+            ("CREATE TABLE $TABLE2_NAME ($COL_AP_ID INTEGER PRIMARY KEY AUTOINCREMENT, $COL_NAME TEXT UNIQUE, $COL_LOCALIZATION TEXT )")
+        db!!.execSQL(CREATE_TABLE2_QUERY)
     }
 
     override fun onUpgrade(db: SQLiteDatabase?, oldVersion: Int, newVersion: Int) {
         db!!.execSQL("DROP TABLE IF EXISTS $TABLE_NAME")
+        onCreate(db!!)
+
+        db!!.execSQL("DROP TABLE IF EXISTS $TABLE2_NAME")
         onCreate(db!!)
     }
 

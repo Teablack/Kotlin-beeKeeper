@@ -1928,7 +1928,6 @@ id dragLeft
 id dragRight
 id dragStart
 id dragUp
-id drawer_layout
 id dropdown_menu
 id easeIn
 id easeInOut
@@ -1978,7 +1977,6 @@ id ifRoom
 id ignore
 id ignoreRequest
 id image
-id imageView
 id info
 id invisible
 id inward
@@ -2059,10 +2057,8 @@ id multiply
 id nav_controller_view_tag
 id nav_gallery
 id nav_home
-id nav_host_fragment
 id nav_host_fragment_container
 id nav_slideshow
-id nav_view
 id navigation_header_container
 id never
 id noScroll
@@ -2182,14 +2178,11 @@ id textSpacerNoButtons
 id textSpacerNoTitle
 id textStart
 id textTempMax
-id textTempMin
 id textTop
 id textWindSpeed
-id text_gallery
 id text_input_end_icon
 id text_input_error_icon
 id text_input_start_icon
-id text_slideshow
 id textinput_counter
 id textinput_error
 id textinput_helper_text
@@ -2201,7 +2194,6 @@ id title
 id titleDividerNoCustom
 id title_template
 id toggle
-id toolbar
 id top
 id topPanel
 id touch_outside
@@ -2295,8 +2287,6 @@ layout abc_tooltip
 layout activity_fullscreen
 layout activity_login
 layout activity_main
-layout app_bar_main
-layout content_main
 layout custom_dialog
 layout design_bottom_navigation_item
 layout design_bottom_sheet_dialog
@@ -2313,9 +2303,6 @@ layout design_navigation_menu
 layout design_navigation_menu_item
 layout design_text_input_end_icon
 layout design_text_input_start_icon
-layout fragment_gallery
-layout fragment_home
-layout fragment_slideshow
 layout material_chip_input_combo
 layout material_clock_display
 layout material_clock_display_divider
@@ -2358,7 +2345,6 @@ layout mtrl_picker_header_title_text
 layout mtrl_picker_header_toggle
 layout mtrl_picker_text_input_date
 layout mtrl_picker_text_input_date_range
-layout nav_header_main
 layout notification_action
 layout notification_action_tombstone
 layout notification_template_custom_big

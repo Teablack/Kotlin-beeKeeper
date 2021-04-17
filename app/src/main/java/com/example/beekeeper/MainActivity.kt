@@ -1,18 +1,21 @@
 package com.example.beekeeper
 
+import android.Manifest
+import android.content.pm.PackageManager
+import android.location.Location
 import android.os.Bundle
-import android.view.Menu
+import android.util.Log
 import android.widget.TextView
 
-import com.google.android.material.navigation.NavigationView
-import androidx.navigation.findNavController
 import androidx.navigation.ui.AppBarConfiguration
-import androidx.navigation.ui.navigateUp
-import androidx.navigation.ui.setupActionBarWithNavController
-import androidx.navigation.ui.setupWithNavController
-import androidx.drawerlayout.widget.DrawerLayout
 import androidx.appcompat.app.AppCompatActivity
-import androidx.appcompat.widget.Toolbar
+import androidx.core.app.ActivityCompat
+import com.google.android.gms.location.FusedLocationProviderClient
+import com.google.android.gms.location.LocationServices
+import okhttp3.*
+import org.json.JSONObject
+import java.io.IOException
+import kotlin.math.roundToInt
 
 class MainActivity : AppCompatActivity() {
 
@@ -20,40 +23,92 @@ class MainActivity : AppCompatActivity() {
     lateinit var greeting : TextView
     lateinit var loggedUser : String
 
+    private lateinit var fusedLocationClient: FusedLocationProviderClient
+    private var latitude: Double? = null
+    private var longitude: Double? = null
+    val client = OkHttpClient()
+
+    lateinit var timezoneText: TextView
+    lateinit var tempText: TextView
+    lateinit var pressureText: TextView
+    lateinit var wind_speedText: TextView
+
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        val toolbar: Toolbar = findViewById(R.id.toolbar)
-        setSupportActionBar(toolbar)
 
         loggedUser = intent.extras!!.getString("userIN").toString()
-
-        val drawerLayout: DrawerLayout = findViewById(R.id.drawer_layout)
-        val navView: NavigationView = findViewById(R.id.nav_view)
-        val navController = findNavController(R.id.nav_host_fragment)
-        // Passing each menu ID as a set of Ids because each
-        // menu should be considered as top level destinations.
-
-        appBarConfiguration = AppBarConfiguration(
-            setOf(
-                R.id.nav_home, R.id.nav_gallery, R.id.nav_slideshow
-            ), drawerLayout
-        )
-        setupActionBarWithNavController(navController, appBarConfiguration)
-        navView.setupWithNavController(navController)
-
-    }
-
-    override fun onCreateOptionsMenu(menu: Menu): Boolean {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        menuInflater.inflate(R.menu.main, menu)
         greeting = findViewById<TextView>(R.id.greeting)
+        timezoneText = findViewById<TextView>(R.id.textLocation)
+        tempText = findViewById<TextView>(R.id.textTempMax)
+        pressureText = findViewById<TextView>(R.id.textAirPressure)
+        wind_speedText = findViewById<TextView>(R.id.textWindSpeed)
+
         greeting.text ="Witaj, "+ loggedUser + "!"
-        return true
+
+        Thread() {
+            run {
+                refreshLocation()
+            }
+        }.start()
+    }
+    fun run(url: String) {
+        val request = Request.Builder()
+            .url(url)
+            .build()
+
+        client.newCall(request).enqueue(object : Callback {
+            override fun onFailure(call: Call, e: IOException) {
+            }
+
+            override fun onResponse(call: Call, response: Response) {
+                var str_response = response.body()!!.string()
+
+                //creating json object
+                val json_contact: JSONObject = JSONObject(str_response)
+
+                //creating json array
+                val json_timezone= json_contact.getString("timezone")
+                Log.d("TAGG", json_timezone)
+                var json_objectdetail: JSONObject =json_contact.getJSONObject("current")
+
+                Log.d("TAG", json_objectdetail.toString())
+
+
+                runOnUiThread() {
+                    timezoneText.text = json_timezone
+                    tempText.text = (json_objectdetail.getString("temp").toDouble() - 273.15).roundToInt().toString() + "°C"
+                    pressureText.text =json_objectdetail.getString("pressure") + "hPa"
+                    wind_speedText.text= "wind:"+json_objectdetail.getString("wind_speed")+"km/h"
+
+                }
+
+            }
+        })
+
     }
 
-    override fun onSupportNavigateUp(): Boolean {
-        val navController = findNavController(R.id.nav_host_fragment)
-        return navController.navigateUp(appBarConfiguration) || super.onSupportNavigateUp()
+    fun refreshLocation() {
+        if (ActivityCompat.checkSelfPermission(
+                 this,
+                Manifest.permission.ACCESS_FINE_LOCATION
+            ) != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(
+                this,
+                Manifest.permission.ACCESS_COARSE_LOCATION
+            ) != PackageManager.PERMISSION_GRANTED
+        ) {
+            return
+        }
+        fusedLocationClient = LocationServices.getFusedLocationProviderClient(this)
+        fusedLocationClient.lastLocation
+            .addOnSuccessListener { location: Location? ->
+                latitude = location?.latitude
+                longitude = location?.longitude
+                Log.d("TAGG", longitude.toString())
+                Log.d("TAGG", latitude.toString())
+                run("https://api.openweathermap.org/data/2.5/onecall?lat=$latitude&lon=$longitude&appid=c89b7c4ee007d027409f973ffb7ab2e1")
+
+            }
     }
 }
