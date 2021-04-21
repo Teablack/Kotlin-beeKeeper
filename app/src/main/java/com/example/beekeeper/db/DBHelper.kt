@@ -19,9 +19,10 @@ class DBHelper(var context: Context) : SQLiteOpenHelper(
         private val COL_USERNAME = "userName"
         private val COL_PASSWORD = "password"
 
-        private val TABLE2_NAME = "Apriary"
-        private val COL_AP_ID = "apriaryID"
-        private val COL_NAME = "apriaryName"
+        private val TABLE2_NAME = "Apiary"
+        private val COL_USER_ID = "userID2"
+        private val COL_AP_ID = "apiaryID"
+        private val COL_NAME = "apiaryName"
         private val COL_LOCALIZATION = "localization"
     }
 
@@ -30,7 +31,7 @@ class DBHelper(var context: Context) : SQLiteOpenHelper(
             ("CREATE TABLE $TABLE_NAME ($COL_ID INTEGER PRIMARY KEY AUTOINCREMENT, $COL_USERNAME TEXT UNIQUE, $COL_PASSWORD TEXT )")
         db!!.execSQL(CREATE_TABLE_QUERY)
         val CREATE_TABLE2_QUERY =
-            ("CREATE TABLE $TABLE2_NAME ($COL_AP_ID INTEGER PRIMARY KEY AUTOINCREMENT, $COL_NAME TEXT UNIQUE, $COL_LOCALIZATION TEXT )")
+            ("CREATE TABLE $TABLE2_NAME ($COL_AP_ID INTEGER PRIMARY KEY AUTOINCREMENT,COL_USER_ID INTEGER, $COL_NAME TEXT UNIQUE, $COL_LOCALIZATION TEXT )")
         db!!.execSQL(CREATE_TABLE2_QUERY)
     }
 

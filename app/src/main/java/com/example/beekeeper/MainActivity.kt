@@ -1,11 +1,13 @@
 package com.example.beekeeper
 
 import android.Manifest
+import android.content.DialogInterface
 import android.content.pm.PackageManager
 import android.location.Location
 import android.os.Bundle
 import android.util.Log
 import android.widget.TextView
+import androidx.appcompat.app.AlertDialog
 
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.appcompat.app.AppCompatActivity
@@ -64,7 +66,7 @@ class MainActivity : AppCompatActivity() {
 
             override fun onResponse(call: Call, response: Response) {
                 var str_response = response.body()!!.string()
-
+                Log.d("TAG", str_response )
                 //creating json object
                 val json_contact: JSONObject = JSONObject(str_response)
 
@@ -90,6 +92,11 @@ class MainActivity : AppCompatActivity() {
     }
 
     fun refreshLocation() {
+        val builder = AlertDialog.Builder(this@MainActivity)
+        builder.setTitle("Lokalizacja")
+        builder.setMessage("Nadaj dostęp do lokalizacji!")
+        builder.setPositiveButton("OK") { dialogInterface: DialogInterface, iLInt -> }
+
         if (ActivityCompat.checkSelfPermission(
                  this,
                 Manifest.permission.ACCESS_FINE_LOCATION
@@ -107,7 +114,12 @@ class MainActivity : AppCompatActivity() {
                 longitude = location?.longitude
                 Log.d("TAGG", longitude.toString())
                 Log.d("TAGG", latitude.toString())
+                if(latitude!=null)
                 run("https://api.openweathermap.org/data/2.5/onecall?lat=$latitude&lon=$longitude&appid=c89b7c4ee007d027409f973ffb7ab2e1")
+                else{
+                    val dialog: AlertDialog = builder.create();
+                    dialog.show();
+                }
 
             }
     }
