@@ -4,6 +4,7 @@ import android.content.ContentValues
 import android.content.Context
 import android.database.sqlite.SQLiteDatabase
 import android.database.sqlite.SQLiteOpenHelper
+import com.example.beekeeper.model.Apiary
 import com.example.beekeeper.model.User
 
 class DBHelper(var context: Context) : SQLiteOpenHelper(
@@ -31,7 +32,7 @@ class DBHelper(var context: Context) : SQLiteOpenHelper(
             ("CREATE TABLE $TABLE_NAME ($COL_ID INTEGER PRIMARY KEY AUTOINCREMENT, $COL_USERNAME TEXT UNIQUE, $COL_PASSWORD TEXT )")
         db!!.execSQL(CREATE_TABLE_QUERY)
         val CREATE_TABLE2_QUERY =
-            ("CREATE TABLE $TABLE2_NAME ($COL_AP_ID INTEGER PRIMARY KEY AUTOINCREMENT,COL_USER_ID INTEGER, $COL_NAME TEXT UNIQUE, $COL_LOCALIZATION TEXT )")
+            ("CREATE TABLE $TABLE2_NAME ($COL_AP_ID INTEGER PRIMARY KEY AUTOINCREMENT,$COL_USER_ID INTEGER, $COL_NAME TEXT UNIQUE, $COL_LOCALIZATION TEXT )")
         db!!.execSQL(CREATE_TABLE2_QUERY)
     }
 
@@ -49,8 +50,8 @@ class DBHelper(var context: Context) : SQLiteOpenHelper(
         val query = "Select * from $TABLE_NAME WHERE $COL_USERNAME LIKE \"$username\""
         val result = db.rawQuery(query, null)
         if (result.moveToFirst()) {
-
             if (result.getString(result.getColumnIndex(COL_USERNAME)) == username) {
+                //val id = result.getString(result.getColumnIndex(COL_ID)) ;
                 db.close()
                 return true
             }
@@ -59,6 +60,17 @@ class DBHelper(var context: Context) : SQLiteOpenHelper(
         return false
     }
 
+    fun findIdByName(username: String): String {
+        val db = this.readableDatabase
+        val query = "Select * from $TABLE_NAME WHERE $COL_USERNAME LIKE \"$username\""
+        val result = db.rawQuery(query, null)
+        lateinit var id : String
+        if (result.moveToFirst()) {
+            id = result.getString(result.getColumnIndex(COL_ID))
+            db.close()
+        }
+        return id
+    }
 
 //    fun updateScore(username: String, score: Int) {
 //
@@ -107,24 +119,23 @@ class DBHelper(var context: Context) : SQLiteOpenHelper(
 //    }
 
 
-//    fun getAllUsers(): MutableList<User> {
-//        val list: MutableList<User> = ArrayList()
-//        val db = this.readableDatabase
-//        val query = "Select * from $TABLE_NAME ORDER BY $COL_USER_SCORE DESC LIMIT 10"
-//        val result = db.rawQuery(query, null)
-//        if (result.moveToFirst()) {
-//            do {
-//                val user = User()
-//                user.userID = result.getString(result.getColumnIndex(COL_ID)).toInt()
-//                user.userName = result.getString(result.getColumnIndex(COL_USERNAME))
-//                user.password = result.getString(result.getColumnIndex(COL_PASSWORD))
-//                user.userScore = result.getString(result.getColumnIndex(COL_USER_SCORE))
-//                list.add(user)
-//            } while (result.moveToNext())
-//        }
-//        db.close()
-//        return list
-//    }
+    fun getAllApiaries(userID: String ): MutableList<Apiary> {
+        val list: MutableList<Apiary> = ArrayList()
+        val db = this.readableDatabase
+        val query = "Select * from $TABLE2_NAME WHERE $COL_USER_ID LIKE \"$userID\" ORDER BY $COL_AP_ID  "
+        val result = db.rawQuery(query, null)
+        if (result.moveToFirst()) {
+            do {
+                val apiary = Apiary()
+                apiary.apiaryID = result.getString(result.getColumnIndex(COL_AP_ID))
+                apiary.apiaryName = result.getString(result.getColumnIndex(COL_NAME))
+                apiary.localization = result.getString(result.getColumnIndex(COL_LOCALIZATION))
+                list.add(apiary)
+            } while (result.moveToNext())
+        }
+        db.close()
+        return list
+    }
 
     fun addUser(user: User) {
         val db = this.writableDatabase

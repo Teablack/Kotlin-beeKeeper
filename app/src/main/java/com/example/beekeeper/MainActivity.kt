@@ -2,10 +2,12 @@ package com.example.beekeeper
 
 import android.Manifest
 import android.content.DialogInterface
+import android.content.Intent
 import android.content.pm.PackageManager
 import android.location.Location
 import android.os.Bundle
 import android.util.Log
+import android.widget.Button
 import android.widget.TextView
 import androidx.appcompat.app.AlertDialog
 
@@ -21,9 +23,9 @@ import kotlin.math.roundToInt
 
 class MainActivity : AppCompatActivity() {
 
-    private lateinit var appBarConfiguration: AppBarConfiguration
     lateinit var greeting : TextView
     lateinit var loggedUser : String
+    lateinit var userID : String
 
     private lateinit var fusedLocationClient: FusedLocationProviderClient
     private var latitude: Double? = null
@@ -34,6 +36,8 @@ class MainActivity : AppCompatActivity() {
     lateinit var tempText: TextView
     lateinit var pressureText: TextView
     lateinit var wind_speedText: TextView
+    lateinit var pasieki : Button
+    lateinit var nfc : Button
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -41,11 +45,15 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         loggedUser = intent.extras!!.getString("userIN").toString()
+        userID = intent.extras!!.getString("userID").toString()
         greeting = findViewById<TextView>(R.id.greeting)
         timezoneText = findViewById<TextView>(R.id.textLocation)
         tempText = findViewById<TextView>(R.id.textTempMax)
         pressureText = findViewById<TextView>(R.id.textAirPressure)
         wind_speedText = findViewById<TextView>(R.id.textWindSpeed)
+
+        pasieki = findViewById<Button>(R.id.pasieki)
+        nfc = findViewById<Button>(R.id.nfc)
 
         greeting.text ="Witaj, "+ loggedUser + "!"
 
@@ -54,6 +62,38 @@ class MainActivity : AppCompatActivity() {
                 refreshLocation()
             }
         }.start()
+
+        pasieki.setOnClickListener {
+            Thread() {
+                run {
+
+                    Thread.sleep(1000);
+                }
+                runOnUiThread() {
+                    val intent = Intent(this, ApiaryList::class.java)
+                    intent.putExtra("userID", userID)
+                    startActivity(intent)
+                    this.onPause()
+                }
+            }.start()
+        }
+
+        nfc.setOnClickListener {
+            Thread() {
+                run {
+
+                    Thread.sleep(1000);
+                }
+                runOnUiThread() {
+//                    val intent = Intent(this, MainActivity::class.java)
+//
+//                    intent.putExtra("userIN", username_str)
+//                    intent.putExtra("userID", user_exists)
+//                    startActivity(intent)
+                    this.onPause()
+                }
+            }.start()
+        }
     }
     fun run(url: String) {
         val request = Request.Builder()
@@ -123,4 +163,6 @@ class MainActivity : AppCompatActivity() {
 
             }
     }
+
+
 }

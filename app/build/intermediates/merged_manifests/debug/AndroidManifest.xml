@@ -24,6 +24,8 @@
         android:supportsRtl="true"
         android:testOnly="true"
         android:theme="@style/Theme.BeeKeeper" >
+        <activity android:name="com.example.beekeeper.ApiaryView" />
+        <activity android:name="com.example.beekeeper.ApiaryList" />
         <activity
             android:name="com.example.beekeeper.MainActivity"
             android:label="@string/title_activity_main"

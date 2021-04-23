@@ -41,10 +41,10 @@ class LoginActivity : AppCompatActivity() {
             if ((username_str.length > 1) && (password_str.length > 5)) {
 
                 user_exists = dbHelper.findUserByName(username_str)
+
                 if (user_exists) {
                     valid_password = dbHelper.checkPassword(username_str, password_str)
                     if (valid_password){
-
                         builder.setTitle("Logowanie")
                         builder.setMessage("Zalogowano uzytkownika $username_str!")
                         val dialog: AlertDialog = builder.create();
@@ -57,8 +57,9 @@ class LoginActivity : AppCompatActivity() {
                             }
                             runOnUiThread() {
                                 val intent = Intent(this, MainActivity::class.java)
-
+                                var userID = dbHelper.findIdByName(username_str)
                                 intent.putExtra("userIN", username_str)
+                                intent.putExtra("userID", userID)
                                 startActivity(intent)
                                 this.onPause()
                             }

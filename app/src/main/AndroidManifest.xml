@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.beekeeper">
+
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
     <uses-permission android:name="android.permission.ACTIVITY_RECOGNITION" />
@@ -14,10 +15,12 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.BeeKeeper">
+        <activity android:name=".ApiaryView"></activity>
+        <activity android:name=".ApiaryList" />
         <activity
             android:name=".MainActivity"
             android:label="@string/title_activity_main"
-            android:theme="@style/Theme.BeeKeeper.NoActionBar"></activity>
+            android:theme="@style/Theme.BeeKeeper.NoActionBar" />
         <activity android:name=".login.LoginActivity" />
         <activity
             android:name=".FullscreenActivity"

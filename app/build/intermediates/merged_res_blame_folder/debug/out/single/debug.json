@@ -60,6 +60,10 @@
         "source": "C:\\Users\\Daria\\Desktop\\git\\Kotlin-beeKeeper\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher_round.png"
     },
     {
+        "merged": "C:\\Users\\Daria\\Desktop\\git\\Kotlin-beeKeeper\\app\\build\\intermediates\\res\\merged\\debug\\layout_apiary_adapter.xml.flat",
+        "source": "C:\\Users\\Daria\\Desktop\\git\\Kotlin-beeKeeper\\app\\src\\main\\res\\layout\\apiary_adapter.xml"
+    },
+    {
         "merged": "C:\\Users\\Daria\\Desktop\\git\\Kotlin-beeKeeper\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_main.xml.flat",
         "source": "C:\\Users\\Daria\\Desktop\\git\\Kotlin-beeKeeper\\app\\src\\main\\res\\layout\\activity_main.xml"
     },
@@ -112,8 +116,16 @@
         "source": "C:\\Users\\Daria\\Desktop\\git\\Kotlin-beeKeeper\\app\\build\\generated\\res\\pngs\\debug\\drawable-ldpi\\ic_launcher_background.png"
     },
     {
+        "merged": "C:\\Users\\Daria\\Desktop\\git\\Kotlin-beeKeeper\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_apiary_list.xml.flat",
+        "source": "C:\\Users\\Daria\\Desktop\\git\\Kotlin-beeKeeper\\app\\src\\main\\res\\layout\\activity_apiary_list.xml"
+    },
+    {
         "merged": "C:\\Users\\Daria\\Desktop\\git\\Kotlin-beeKeeper\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_ic_launcher.png.flat",
         "source": "C:\\Users\\Daria\\Desktop\\git\\Kotlin-beeKeeper\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "C:\\Users\\Daria\\Desktop\\git\\Kotlin-beeKeeper\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_apiary.xml.flat",
+        "source": "C:\\Users\\Daria\\Desktop\\git\\Kotlin-beeKeeper\\app\\src\\main\\res\\layout\\activity_apiary.xml"
     },
     {
         "merged": "C:\\Users\\Daria\\Desktop\\git\\Kotlin-beeKeeper\\app\\build\\intermediates\\res\\merged\\debug\\drawable_side_nav_bar.xml.flat",

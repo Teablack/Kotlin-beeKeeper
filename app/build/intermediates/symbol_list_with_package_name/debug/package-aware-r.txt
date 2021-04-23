@@ -1857,6 +1857,11 @@ id all
 id always
 id animateToEnd
 id animateToStart
+id apiaryAdapter
+id apiaryLocalization
+id apiaryName
+id apiarylistView
+id apiarytoolbar
 id asConfigured
 id async
 id auto
@@ -1870,8 +1875,6 @@ id beginning
 id blocking
 id bottom
 id bounce
-id button
-id button2
 id buttonPanel
 id cache_measures
 id cancel_button
@@ -2062,6 +2065,8 @@ id nav_controller_view_tag
 id nav_host_fragment_container
 id navigation_header_container
 id never
+id newApiary
+id nfc
 id noScroll
 id none
 id normal
@@ -2079,6 +2084,7 @@ id parent
 id parentPanel
 id parentRelative
 id parent_matrix
+id pasieki
 id passwordInput
 id passwordText1
 id password_toggle
@@ -2285,9 +2291,12 @@ layout abc_search_dropdown_item_icons_2line
 layout abc_search_view
 layout abc_select_dialog_material
 layout abc_tooltip
+layout activity_apiary
+layout activity_apiary_list
 layout activity_fullscreen
 layout activity_login
 layout activity_main
+layout apiary_adapter
 layout custom_dialog
 layout design_bottom_navigation_item
 layout design_bottom_sheet_dialog
