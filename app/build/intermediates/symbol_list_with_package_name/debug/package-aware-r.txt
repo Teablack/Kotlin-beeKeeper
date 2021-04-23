@@ -1858,6 +1858,8 @@ id always
 id animateToEnd
 id animateToStart
 id apiaryAdapter
+id apiaryButton
+id apiaryListToolbar
 id apiaryLocalization
 id apiaryName
 id apiarylistView
@@ -1875,6 +1877,7 @@ id beginning
 id blocking
 id bottom
 id bounce
+id button2
 id buttonPanel
 id cache_measures
 id cancel_button
@@ -1984,6 +1987,7 @@ id ifRoom
 id ignore
 id ignoreRequest
 id image
+id imageButton
 id info
 id invisible
 id inward
@@ -2186,6 +2190,8 @@ id textSpacerNoTitle
 id textStart
 id textTempMax
 id textTop
+id textView
+id textView2
 id textWindSpeed
 id text_input_end_icon
 id text_input_error_icon

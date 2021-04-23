@@ -15,13 +15,20 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.BeeKeeper">
-        <activity android:name=".ApiaryView"></activity>
-        <activity android:name=".ApiaryList" />
+        <activity android:name=".ApiaryView"
+            android:theme="@style/Theme.BeeKeeper.NoActionBar">
+
+        </activity>
+        <activity
+            android:name=".ApiaryList"
+            android:theme="@style/Theme.BeeKeeper.NoActionBar"/>
         <activity
             android:name=".MainActivity"
             android:label="@string/title_activity_main"
             android:theme="@style/Theme.BeeKeeper.NoActionBar" />
-        <activity android:name=".login.LoginActivity" />
+        <activity
+            android:name=".login.LoginActivity"
+            android:theme="@style/Theme.BeeKeeper.NoActionBar"/>
         <activity
             android:name=".FullscreenActivity"
             android:configChanges="orientation|keyboardHidden|screenSize"

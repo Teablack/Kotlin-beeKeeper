@@ -24,13 +24,20 @@
         android:supportsRtl="true"
         android:testOnly="true"
         android:theme="@style/Theme.BeeKeeper" >
-        <activity android:name="com.example.beekeeper.ApiaryView" />
-        <activity android:name="com.example.beekeeper.ApiaryList" />
+        <activity
+            android:name="com.example.beekeeper.ApiaryView"
+            android:theme="@style/Theme.BeeKeeper.NoActionBar" >
+        </activity>
+        <activity
+            android:name="com.example.beekeeper.ApiaryList"
+            android:theme="@style/Theme.BeeKeeper.NoActionBar" />
         <activity
             android:name="com.example.beekeeper.MainActivity"
             android:label="@string/title_activity_main"
             android:theme="@style/Theme.BeeKeeper.NoActionBar" />
-        <activity android:name="com.example.beekeeper.login.LoginActivity" />
+        <activity
+            android:name="com.example.beekeeper.login.LoginActivity"
+            android:theme="@style/Theme.BeeKeeper.NoActionBar" />
         <activity
             android:name="com.example.beekeeper.FullscreenActivity"
             android:configChanges="orientation|keyboardHidden|screenSize"

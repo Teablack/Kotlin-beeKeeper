@@ -1,5 +1,6 @@
 package com.example.beekeeper.login
 
+import android.content.Context
 import android.content.DialogInterface
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
@@ -45,6 +46,13 @@ class LoginActivity : AppCompatActivity() {
                 if (user_exists) {
                     valid_password = dbHelper.checkPassword(username_str, password_str)
                     if (valid_password){
+                        var sharedPref = this.getSharedPreferences("com.example.beekeeper.shared",0)
+                        var islogged = sharedPref.edit()
+                        islogged.putBoolean("islogged",true)
+                        islogged.putString("username",username_str)
+                        islogged.putString("password",password_str)
+                        islogged.apply()
+
                         builder.setTitle("Logowanie")
                         builder.setMessage("Zalogowano uzytkownika $username_str!")
                         val dialog: AlertDialog = builder.create();

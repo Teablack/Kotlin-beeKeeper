@@ -149,5 +149,17 @@ class DBHelper(var context: Context) : SQLiteOpenHelper(
         db.close()
     }
 
+    fun addApiary(apiary: Apiary) {
+        val db = this.writableDatabase
+        val values = ContentValues()
 
+        values.put(COL_USER_ID, apiary.userID2)
+        values.put(COL_AP_ID, apiary.apiaryID)
+        values.put(COL_NAME, apiary.apiaryName)
+        values.put(COL_LOCALIZATION, apiary.localization)
+
+        var result = db.insert(TABLE2_NAME, null, values)
+
+        db.close()
+    }
 }
