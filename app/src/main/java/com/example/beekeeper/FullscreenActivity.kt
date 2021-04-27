@@ -23,19 +23,19 @@ class FullscreenActivity : AppCompatActivity() {
                 var sharedPref = this.getSharedPreferences("com.example.beekeeper.shared",0)
                 val islogged = sharedPref.getBoolean("islogged",false)
                 Log.d("!!!!!TAGG", islogged.toString())
-//                if(islogged){
-//                    runOnUiThread(){
-//                        val username_str = sharedPref.getString("username","")
-//
-//                        val intent = Intent(this, MainActivity::class.java)
-//                        val dbHelper = DBHelper(this)
-//                        var userID = dbHelper.findIdByName(username_str.toString())
-//                        intent.putExtra("userIN", username_str)
-//                        intent.putExtra("userID", userID)
-//                        startActivity(intent)
-//                        finish()
-//                    }
-//                }
+                if(islogged){
+                    runOnUiThread(){
+                        val username_str = sharedPref.getString("username","")
+
+                        val intent = Intent(this, MainActivity::class.java)
+                        val dbHelper = DBHelper(this)
+                        var userID = dbHelper.findIdByName(username_str.toString())
+                        intent.putExtra("userIN", username_str)
+                        intent.putExtra("userID", userID)
+                        startActivity(intent)
+                        finish()
+                    }
+                }
 
             }
             runOnUiThread(){

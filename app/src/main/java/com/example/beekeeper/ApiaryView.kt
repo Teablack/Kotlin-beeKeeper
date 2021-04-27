@@ -28,16 +28,15 @@ class ApiaryView : AppCompatActivity() {
         val apiarytoolbar = findViewById<Toolbar>(R.id.apiarytoolbar)
 
 
+//dodanie nowej pasieki - dodac weryfikacje wprowadzonych danych
         apiaryButton.setOnClickListener(){
-            apiaryName_str = apiaryName.text.toString()
-            apiaryLocalization_str = apiaryLocalization.text.toString()
-            val dbHelper = DBHelper(this)
-            val apiary = Apiary(userID,null, apiaryName_str, apiaryLocalization_str)
-            dbHelper.addApiary(apiary)
-
             Thread() {
                 run {
-                    Thread.sleep(1000);
+                    apiaryName_str = apiaryName.text.toString()
+                    apiaryLocalization_str = apiaryLocalization.text.toString()
+                    val dbHelper = DBHelper(this)
+                    val apiary = Apiary(userID,null, apiaryName_str, apiaryLocalization_str)
+                    dbHelper.addApiary(apiary)
                 }
                 runOnUiThread() {
                     val intent = Intent(this, ApiaryList::class.java)
@@ -48,7 +47,7 @@ class ApiaryView : AppCompatActivity() {
             }.start()
         }
 
-
+        //cofanie
         apiarytoolbar.setNavigationOnClickListener() {
             Thread() {
             run {

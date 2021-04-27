@@ -163,6 +163,9 @@ class MainActivity : AppCompatActivity() {
 
             }
     }
-
+    override fun onResume() {
+        super.onResume()
+        //userID = intent.extras!!.getString("userID").toString()
+    }
 
 }

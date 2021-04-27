@@ -24,10 +24,10 @@
         android:supportsRtl="true"
         android:testOnly="true"
         android:theme="@style/Theme.BeeKeeper" >
+        <activity android:name="com.example.beekeeper.HiveList" />
         <activity
             android:name="com.example.beekeeper.ApiaryView"
-            android:theme="@style/Theme.BeeKeeper.NoActionBar" >
-        </activity>
+            android:theme="@style/Theme.BeeKeeper.NoActionBar" />
         <activity
             android:name="com.example.beekeeper.ApiaryList"
             android:theme="@style/Theme.BeeKeeper.NoActionBar" />

@@ -4,6 +4,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.BaseAdapter
+import android.widget.Button
 import android.widget.TextView
 import com.example.beekeeper.R
 import com.example.beekeeper.model.Apiary
@@ -54,10 +55,10 @@ class ApiaryAdapter(context: Context, arrayListDetails:ArrayList<Apiary>) : Base
         public val apiaryLocalization: TextView
 
 
+
         init {
             this.apiaryName = row?.findViewById<TextView>(R.id.apiaryName) as TextView
             this.apiaryLocalization = row?.findViewById<TextView>(R.id.apiaryLocalization) as TextView
-
         }
 
 

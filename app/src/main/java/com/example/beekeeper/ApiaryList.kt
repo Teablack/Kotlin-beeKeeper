@@ -4,6 +4,7 @@ import android.content.Intent
 import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import android.view.View
 import android.widget.AdapterView
 import android.widget.ListView
@@ -30,6 +31,7 @@ class ApiaryList : AppCompatActivity(), AdapterView.OnItemClickListener {
         val apiarytoolbar = findViewById<Toolbar>(R.id.apiaryListToolbar)
 
         listView_details = findViewById<ListView>(R.id.apiarylistView) as ListView
+
         listView_details.setOnItemClickListener(this);
 
         run {
@@ -42,6 +44,7 @@ class ApiaryList : AppCompatActivity(), AdapterView.OnItemClickListener {
             listView_details.adapter=obj_adapter
         }
 
+        //tworzymy nowa pasieke
         newApiaryButton.setOnClickListener(){
             Thread() {
                 run {
@@ -50,11 +53,14 @@ class ApiaryList : AppCompatActivity(), AdapterView.OnItemClickListener {
                 runOnUiThread() {
                     val intent = Intent(this, ApiaryView::class.java)
                     intent.putExtra("userID", userID)
+                    intent.putExtra("isnew", "new")
                     startActivity(intent)
                     this.onPause()
                 }
             }.start()
         }
+
+        //cofamy sie
         apiarytoolbar.setNavigationOnClickListener() {
             Thread() {
                 run {
@@ -72,25 +78,24 @@ class ApiaryList : AppCompatActivity(), AdapterView.OnItemClickListener {
 
     }
 
+
+    override fun onResume() {
+        super.onResume()
+    }
+
     override fun onItemClick(parent: AdapterView<*>?, view: View?, position: Int, id: Long) {
+        //Log.d("TAGG", "ONITEMCLICK")
         Thread() {
             run {
                 Thread.sleep(1000);
             }
             runOnUiThread() {
                 val userID = arrayList_details[position].apiaryID ;
-                //val intent = Intent(this, PostActivity::class.java)
-                //intent.putExtra("userID", userID.toInt())
+                val intent = Intent(this, HiveList::class.java)
+                intent.putExtra("apiaryID", position)
                 startActivity(intent)
                 this.onPause()
             }
         }.start()
-    }
-
-
-
-
-    override fun onResume() {
-        super.onResume()
     }
 }

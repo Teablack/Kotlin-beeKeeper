@@ -44,15 +44,17 @@
 25        android:testOnly="true"
 26        android:theme="@style/Theme.BeeKeeper" >
 26-->C:\Users\Daria\Desktop\git\Kotlin-beeKeeper\app\src\main\AndroidManifest.xml:17:9-47
-27        <activity
-27-->C:\Users\Daria\Desktop\git\Kotlin-beeKeeper\app\src\main\AndroidManifest.xml:18:9-21:20
-28            android:name="com.example.beekeeper.ApiaryView"
-28-->C:\Users\Daria\Desktop\git\Kotlin-beeKeeper\app\src\main\AndroidManifest.xml:18:19-45
-29            android:theme="@style/Theme.BeeKeeper.NoActionBar" >
-29-->C:\Users\Daria\Desktop\git\Kotlin-beeKeeper\app\src\main\AndroidManifest.xml:19:13-63
-30        </activity>
+27        <activity android:name="com.example.beekeeper.HiveList" />
+27-->C:\Users\Daria\Desktop\git\Kotlin-beeKeeper\app\src\main\AndroidManifest.xml:18:9-55
+27-->C:\Users\Daria\Desktop\git\Kotlin-beeKeeper\app\src\main\AndroidManifest.xml:18:19-43
+28        <activity
+28-->C:\Users\Daria\Desktop\git\Kotlin-beeKeeper\app\src\main\AndroidManifest.xml:19:9-21:75
+29            android:name="com.example.beekeeper.ApiaryView"
+29-->C:\Users\Daria\Desktop\git\Kotlin-beeKeeper\app\src\main\AndroidManifest.xml:20:13-39
+30            android:theme="@style/Theme.BeeKeeper.NoActionBar" />
+30-->C:\Users\Daria\Desktop\git\Kotlin-beeKeeper\app\src\main\AndroidManifest.xml:21:13-63
 31        <activity
-31-->C:\Users\Daria\Desktop\git\Kotlin-beeKeeper\app\src\main\AndroidManifest.xml:22:9-24:65
+31-->C:\Users\Daria\Desktop\git\Kotlin-beeKeeper\app\src\main\AndroidManifest.xml:22:9-24:66
 32            android:name="com.example.beekeeper.ApiaryList"
 32-->C:\Users\Daria\Desktop\git\Kotlin-beeKeeper\app\src\main\AndroidManifest.xml:23:13-39
 33            android:theme="@style/Theme.BeeKeeper.NoActionBar" />
@@ -66,7 +68,7 @@
 37            android:theme="@style/Theme.BeeKeeper.NoActionBar" />
 37-->C:\Users\Daria\Desktop\git\Kotlin-beeKeeper\app\src\main\AndroidManifest.xml:28:13-63
 38        <activity
-38-->C:\Users\Daria\Desktop\git\Kotlin-beeKeeper\app\src\main\AndroidManifest.xml:29:9-31:65
+38-->C:\Users\Daria\Desktop\git\Kotlin-beeKeeper\app\src\main\AndroidManifest.xml:29:9-31:66
 39            android:name="com.example.beekeeper.login.LoginActivity"
 39-->C:\Users\Daria\Desktop\git\Kotlin-beeKeeper\app\src\main\AndroidManifest.xml:30:13-48
 40            android:theme="@style/Theme.BeeKeeper.NoActionBar" />

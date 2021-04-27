@@ -129,14 +129,18 @@ MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] C:\Users\Da
 		ADDED from C:\Users\Daria\Desktop\git\Kotlin-beeKeeper\app\src\main\AndroidManifest.xml:12:9-35
 	android:theme
 		ADDED from C:\Users\Daria\Desktop\git\Kotlin-beeKeeper\app\src\main\AndroidManifest.xml:17:9-47
-activity#com.example.beekeeper.ApiaryView
-ADDED from C:\Users\Daria\Desktop\git\Kotlin-beeKeeper\app\src\main\AndroidManifest.xml:18:9-21:20
-	android:theme
-		ADDED from C:\Users\Daria\Desktop\git\Kotlin-beeKeeper\app\src\main\AndroidManifest.xml:19:13-63
+activity#com.example.beekeeper.HiveList
+ADDED from C:\Users\Daria\Desktop\git\Kotlin-beeKeeper\app\src\main\AndroidManifest.xml:18:9-55
 	android:name
-		ADDED from C:\Users\Daria\Desktop\git\Kotlin-beeKeeper\app\src\main\AndroidManifest.xml:18:19-45
+		ADDED from C:\Users\Daria\Desktop\git\Kotlin-beeKeeper\app\src\main\AndroidManifest.xml:18:19-43
+activity#com.example.beekeeper.ApiaryView
+ADDED from C:\Users\Daria\Desktop\git\Kotlin-beeKeeper\app\src\main\AndroidManifest.xml:19:9-21:75
+	android:theme
+		ADDED from C:\Users\Daria\Desktop\git\Kotlin-beeKeeper\app\src\main\AndroidManifest.xml:21:13-63
+	android:name
+		ADDED from C:\Users\Daria\Desktop\git\Kotlin-beeKeeper\app\src\main\AndroidManifest.xml:20:13-39
 activity#com.example.beekeeper.ApiaryList
-ADDED from C:\Users\Daria\Desktop\git\Kotlin-beeKeeper\app\src\main\AndroidManifest.xml:22:9-24:65
+ADDED from C:\Users\Daria\Desktop\git\Kotlin-beeKeeper\app\src\main\AndroidManifest.xml:22:9-24:66
 	android:theme
 		ADDED from C:\Users\Daria\Desktop\git\Kotlin-beeKeeper\app\src\main\AndroidManifest.xml:24:13-63
 	android:name
@@ -150,7 +154,7 @@ ADDED from C:\Users\Daria\Desktop\git\Kotlin-beeKeeper\app\src\main\AndroidManif
 	android:name
 		ADDED from C:\Users\Daria\Desktop\git\Kotlin-beeKeeper\app\src\main\AndroidManifest.xml:26:13-41
 activity#com.example.beekeeper.login.LoginActivity
-ADDED from C:\Users\Daria\Desktop\git\Kotlin-beeKeeper\app\src\main\AndroidManifest.xml:29:9-31:65
+ADDED from C:\Users\Daria\Desktop\git\Kotlin-beeKeeper\app\src\main\AndroidManifest.xml:29:9-31:66
 	android:theme
 		ADDED from C:\Users\Daria\Desktop\git\Kotlin-beeKeeper\app\src\main\AndroidManifest.xml:31:13-63
 	android:name

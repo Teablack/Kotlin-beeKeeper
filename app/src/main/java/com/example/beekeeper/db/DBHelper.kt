@@ -5,6 +5,7 @@ import android.content.Context
 import android.database.sqlite.SQLiteDatabase
 import android.database.sqlite.SQLiteOpenHelper
 import com.example.beekeeper.model.Apiary
+import com.example.beekeeper.model.Hive
 import com.example.beekeeper.model.User
 
 class DBHelper(var context: Context) : SQLiteOpenHelper(
@@ -25,6 +26,18 @@ class DBHelper(var context: Context) : SQLiteOpenHelper(
         private val COL_AP_ID = "apiaryID"
         private val COL_NAME = "apiaryName"
         private val COL_LOCALIZATION = "localization"
+
+        private val TABLE3_NAME = "Hive"
+        private val COL_APIARY_ID = "apiaryID"
+        private val COL_HIVE_ID = "hiveID"
+        private val COL_HIVE_NAME = "hiveName"
+        private val COL_TYPE = "hiveType"
+        private val COL_QUEEN_BEE = "queenbee"
+        private val COL_PERSONALITY = "queenPersonality"
+        private val COL_FRAME = "frameCount"
+        private val COL_AC_FRAME = "actualFrameCount"
+        private val COL_HONEYBEES = "honeybees"
+
     }
 
     override fun onCreate(db: SQLiteDatabase?) {
@@ -34,6 +47,9 @@ class DBHelper(var context: Context) : SQLiteOpenHelper(
         val CREATE_TABLE2_QUERY =
             ("CREATE TABLE $TABLE2_NAME ($COL_AP_ID INTEGER PRIMARY KEY AUTOINCREMENT,$COL_USER_ID INTEGER, $COL_NAME TEXT UNIQUE, $COL_LOCALIZATION TEXT )")
         db!!.execSQL(CREATE_TABLE2_QUERY)
+        val CREATE_TABLE3_QUERY =
+                ("CREATE TABLE $TABLE3_NAME ($COL_HIVE_ID INTEGER PRIMARY KEY AUTOINCREMENT,$COL_APIARY_ID INTEGER, $COL_HIVE_NAME TEXT UNIQUE, $COL_TYPE TEXT,$COL_QUEEN_BEE TEXT,$COL_PERSONALITY TEXT,$COL_FRAME TEXT,$COL_AC_FRAME TEXT,$COL_HONEYBEES TEXT  )")
+        db!!.execSQL(CREATE_TABLE3_QUERY)
     }
 
     override fun onUpgrade(db: SQLiteDatabase?, oldVersion: Int, newVersion: Int) {
@@ -41,6 +57,9 @@ class DBHelper(var context: Context) : SQLiteOpenHelper(
         onCreate(db!!)
 
         db!!.execSQL("DROP TABLE IF EXISTS $TABLE2_NAME")
+        onCreate(db!!)
+
+        db!!.execSQL("DROP TABLE IF EXISTS $TABLE3_NAME")
         onCreate(db!!)
     }
 
@@ -103,21 +122,6 @@ class DBHelper(var context: Context) : SQLiteOpenHelper(
         return false
     }
 
-//
-//    fun getActualScore(username: String): Int {
-//        val query = "SELECT * from $TABLE_NAME WHERE $COL_USERNAME LIKE \"$username\" "
-//
-//        val db = this.writableDatabase
-//
-//        val result = db.rawQuery(query, null)
-//        if (result.moveToFirst()) {
-//            val output = result.getInt(result.getColumnIndex(COL_USER_SCORE))
-//            return output
-//        }
-//        db.close()
-//        return 0;
-//    }
-
 
     fun getAllApiaries(userID: String ): MutableList<Apiary> {
         val list: MutableList<Apiary> = ArrayList()
@@ -136,6 +140,31 @@ class DBHelper(var context: Context) : SQLiteOpenHelper(
         db.close()
         return list
     }
+
+    fun getAllHives(apiaryID: String ): MutableList<Hive> {
+        val list: MutableList<Hive> = ArrayList()
+        val db = this.readableDatabase
+        val query = "Select * from $TABLE3_NAME WHERE $COL_APIARY_ID LIKE \"$apiaryID\" ORDER BY $COL_HIVE_ID  "
+        val result = db.rawQuery(query, null)
+        if (result.moveToFirst()) {
+            do {
+                val hive = Hive()
+                hive.hiveID = result.getString(result.getColumnIndex(COL_HIVE_ID))
+                hive.hiveName = result.getString(result.getColumnIndex(COL_HIVE_NAME))
+                hive.hiveType = result.getString(result.getColumnIndex(COL_TYPE))
+
+                hive.queenbee = result.getString(result.getColumnIndex(COL_QUEEN_BEE))
+                hive.queenPersonality = result.getString(result.getColumnIndex(COL_PERSONALITY))
+                hive.frameCount = result.getString(result.getColumnIndex(COL_FRAME))
+                hive.actualFrameCount = result.getString(result.getColumnIndex(COL_AC_FRAME))
+                hive.honeybees = result.getString(result.getColumnIndex(COL_HONEYBEES))
+                list.add(hive)
+            } while (result.moveToNext())
+        }
+        db.close()
+        return list
+    }
+
 
     fun addUser(user: User) {
         val db = this.writableDatabase
@@ -162,4 +191,39 @@ class DBHelper(var context: Context) : SQLiteOpenHelper(
 
         db.close()
     }
+
+    fun addHive(hive: Hive) {
+        val db = this.writableDatabase
+        val values = ContentValues()
+
+        values.put(COL_APIARY_ID, hive.apiaryID)
+
+        values.put(COL_HIVE_ID, hive.hiveID)
+        values.put(COL_HIVE_NAME, hive.hiveName)
+        values.put(COL_TYPE, hive.hiveType)
+
+        values.put(COL_QUEEN_BEE, hive.queenbee)
+        values.put(COL_PERSONALITY, hive.queenPersonality)
+        values.put(COL_FRAME, hive.frameCount)
+
+        values.put(COL_AC_FRAME, hive.actualFrameCount)
+        values.put(COL_HONEYBEES, hive.honeybees)
+
+        var result = db.insert(TABLE3_NAME, null, values)
+
+        db.close()
+    }
+
+    //    fun updateApiary(username: String, score: Int) {
+//
+//        val db = this.readableDatabase
+//        val newValues = ContentValues()
+//        newValues.put(COL_USERNAME, username)
+//        newValues.put(COL_USER_SCORE, score.toString())
+//
+//        db.update(TABLE_NAME, newValues, "$COL_USERNAME='$username'", null)
+//
+//        db.close()
+//        getAllUsers()
+//    }
 }
