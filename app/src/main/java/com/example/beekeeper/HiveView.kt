@@ -3,6 +3,7 @@ package com.example.beekeeper
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
 import android.widget.Button
 import android.widget.TextView
 import androidx.appcompat.widget.Toolbar
@@ -17,9 +18,10 @@ class HiveView : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_hive_view)
         val apiaryID = intent.extras!!.getString("apiaryID").toString()
-
         userID = intent.extras!!.getString("userID").toString()
+        val hiveID = intent.extras!!.getString("hiveID").toString()
 
+        val dbHelper = DBHelper(this)
         val hiveName = findViewById<TextView>(R.id.hiveNameText)
         val hiveType = findViewById<TextView>(R.id.hiveType)
         val hiveQueen = findViewById<TextView>(R.id.hiveQueen)
@@ -31,9 +33,18 @@ class HiveView : AppCompatActivity() {
 
         val hiveButton = findViewById<Button>(R.id.hiveButton)
 
+        val deleteHive = findViewById<Button>(R.id.deleteHive)
 
         val hivetoolbar = findViewById<Toolbar>(R.id.hiveviewtoolbar)
 
+
+        if(hiveID.equals("new")){
+            hiveButton.text="Utwórz nowy ul"
+        }
+        else {
+            hiveButton.text="Modyfikuj"
+            deleteHive.setVisibility(View.VISIBLE);
+        }
         //dodanie nowego ula- dodac weryfikacje wprowadzonych danych
         hiveButton.setOnClickListener(){
             Thread() {
@@ -47,9 +58,15 @@ class HiveView : AppCompatActivity() {
                     var actualFrameCountText = actualFrameCount.text.toString()
                     var honeybeesText = honeybees.text.toString()
 
-                    val dbHelper = DBHelper(this)
-                    val hive = Hive( apiaryID,null, hiveNameText,hiveTypeText,hiveQueentext,queenPersonalityText,frameCountText, actualFrameCountText,honeybeesText )
-                    dbHelper.addHive(hive)
+
+                    if(hiveID.equals("new")){
+                        val hive = Hive( apiaryID,null, hiveNameText,hiveTypeText,hiveQueentext,queenPersonalityText,frameCountText, actualFrameCountText,honeybeesText , "")
+                        dbHelper.addHive(hive)
+                    }
+                    else {
+                        val hive = Hive( apiaryID,hiveID, hiveNameText,hiveTypeText,hiveQueentext,queenPersonalityText,frameCountText, actualFrameCountText,honeybeesText , "")
+                        dbHelper.updateHive(hive)
+                    }
                 }
                 runOnUiThread() {
                     val intent = Intent(this, HiveList::class.java)
@@ -77,7 +94,16 @@ class HiveView : AppCompatActivity() {
             }.start()
 
         }
-
+        deleteHive.setOnClickListener(){
+            dbHelper.deleteHive(hiveID)
+            runOnUiThread() {
+                val intent = Intent(this, HiveList::class.java)
+                intent.putExtra("userID", userID)
+                intent.putExtra("apiaryID", userID)
+                startActivity(intent)
+                this.onPause()
+            }
+        }
 
 
 

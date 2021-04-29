@@ -47,8 +47,8 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         val mainToolbar = findViewById<Toolbar>(R.id.mainToolbar)
-
-        loggedUser = intent.extras!!.getString("username").toString()
+        var sharedPref = this.getSharedPreferences("com.example.beekeeper.shared",0)
+        loggedUser = sharedPref.getString("username","").toString()
         userID = intent.extras!!.getString("userID").toString()
 
         greeting = findViewById<TextView>(R.id.greeting)
@@ -77,7 +77,6 @@ class MainActivity : AppCompatActivity() {
                 runOnUiThread() {
                     val intent = Intent(this, ApiaryList::class.java)
                     intent.putExtra("userID", userID)
-                    intent.putExtra("username", loggedUser)
 
                     startActivity(intent)
                     this.onPause()

@@ -37,6 +37,7 @@ class DBHelper(var context: Context) : SQLiteOpenHelper(
         private val COL_FRAME = "frameCount"
         private val COL_AC_FRAME = "actualFrameCount"
         private val COL_HONEYBEES = "honeybees"
+        private val COL_NFC = "nfcID"
 
     }
 
@@ -48,7 +49,7 @@ class DBHelper(var context: Context) : SQLiteOpenHelper(
             ("CREATE TABLE $TABLE2_NAME ($COL_AP_ID INTEGER PRIMARY KEY AUTOINCREMENT,$COL_USER_ID INTEGER, $COL_NAME TEXT, $COL_LOCALIZATION TEXT )")
         db!!.execSQL(CREATE_TABLE2_QUERY)
         val CREATE_TABLE3_QUERY =
-                ("CREATE TABLE $TABLE3_NAME ($COL_HIVE_ID INTEGER PRIMARY KEY AUTOINCREMENT,$COL_APIARY_ID INTEGER, $COL_HIVE_NAME TEXT , $COL_TYPE TEXT,$COL_QUEEN_BEE TEXT,$COL_PERSONALITY TEXT,$COL_FRAME TEXT,$COL_AC_FRAME TEXT,$COL_HONEYBEES TEXT  )")
+                ("CREATE TABLE $TABLE3_NAME ($COL_HIVE_ID INTEGER PRIMARY KEY AUTOINCREMENT,$COL_APIARY_ID INTEGER, $COL_HIVE_NAME TEXT , $COL_TYPE TEXT,$COL_QUEEN_BEE TEXT,$COL_PERSONALITY TEXT,$COL_FRAME TEXT,$COL_AC_FRAME TEXT,$COL_HONEYBEES TEXT , $COL_NFC TEXT )")
         db!!.execSQL(CREATE_TABLE3_QUERY)
     }
 
@@ -91,18 +92,47 @@ class DBHelper(var context: Context) : SQLiteOpenHelper(
         return id
     }
 
-//    fun updateScore(username: String, score: Int) {
-//
-//        val db = this.readableDatabase
-//        val newValues = ContentValues()
-//        newValues.put(COL_USERNAME, username)
-//        newValues.put(COL_USER_SCORE, score.toString())
-//
-//        db.update(TABLE_NAME, newValues, "$COL_USERNAME='$username'", null)
-//
-//        db.close()
-//        getAllUsers()
-//    }
+    fun updateApiary(apiary : Apiary) {
+        val db = this.readableDatabase
+        val newValues = ContentValues()
+        newValues.put(COL_NAME, apiary.apiaryName)
+        newValues.put(COL_LOCALIZATION, apiary.localization)
+
+        db.update(TABLE2_NAME, newValues, "$COL_AP_ID='${apiary.apiaryID}'", null)
+
+        db.close()
+    }
+
+    fun deleteApiary(apiaryID : String) {
+        val db = this.readableDatabase
+        db.delete(TABLE2_NAME, "$COL_AP_ID='${apiaryID}'", null)
+        db.delete(TABLE3_NAME, "$COL_APIARY_ID='${apiaryID}'", null)
+        db.close()
+    }
+
+    fun updateHive(hive : Hive) {
+        val db = this.readableDatabase
+        val newValues = ContentValues()
+        newValues.put(COL_HIVE_NAME, hive.hiveName)
+        newValues.put(COL_TYPE, hive.hiveType)
+        newValues.put(COL_QUEEN_BEE, hive.queenbee)
+        newValues.put(COL_PERSONALITY, hive.queenPersonality)
+        newValues.put(COL_FRAME, hive.frameCount)
+        newValues.put(COL_TYPE, hive.hiveType)
+        newValues.put(COL_AC_FRAME, hive.actualFrameCount)
+        newValues.put(COL_HONEYBEES, hive.honeybees)
+        newValues.put(COL_NFC, hive.nfcID)
+
+        db.update(TABLE3_NAME, newValues, "$COL_AP_ID='${hive.hiveID}'", null)
+
+        db.close()
+    }
+
+    fun deleteHive(hiveID : String) {
+        val db = this.readableDatabase
+        db.delete(TABLE3_NAME, "$COL_HIVE_ID='${hiveID}'", null)
+        db.close()
+    }
 
     fun checkPassword(username: String, password: String): Boolean {
         val db = this.readableDatabase
@@ -173,7 +203,7 @@ class DBHelper(var context: Context) : SQLiteOpenHelper(
         values.put(COL_USERNAME, user.userName)
         values.put(COL_PASSWORD, user.password)
 
-        var result = db.insert(TABLE_NAME, null, values)
+        db.insert(TABLE_NAME, null, values)
 
         db.close()
     }
@@ -187,7 +217,7 @@ class DBHelper(var context: Context) : SQLiteOpenHelper(
         values.put(COL_NAME, apiary.apiaryName)
         values.put(COL_LOCALIZATION, apiary.localization)
 
-        var result = db.insert(TABLE2_NAME, null, values)
+        db.insert(TABLE2_NAME, null, values)
 
         db.close()
     }
@@ -208,8 +238,9 @@ class DBHelper(var context: Context) : SQLiteOpenHelper(
 
         values.put(COL_AC_FRAME, hive.actualFrameCount)
         values.put(COL_HONEYBEES, hive.honeybees)
+        values.put(COL_NFC, hive.nfcID)
 
-        var result = db.insert(TABLE3_NAME, null, values)
+        db.insert(TABLE3_NAME, null, values)
 
         db.close()
     }

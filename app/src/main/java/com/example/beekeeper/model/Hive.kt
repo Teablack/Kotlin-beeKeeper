@@ -11,6 +11,7 @@ class Hive {
     lateinit var frameCount :String
     lateinit var actualFrameCount :String
     lateinit var honeybees :String
+    lateinit var nfcID:String
 
 
     constructor(
@@ -18,7 +19,7 @@ class Hive {
         queenPersonality:String,
         frameCount:String,
         actualFrameCount:String,
-        honeybees:String) {
+        honeybees:String, nfcID: String) {
         if (apiaryID != null) {
             this.apiaryID = apiaryID
         }
@@ -33,6 +34,7 @@ class Hive {
         this.frameCount = frameCount
         this.actualFrameCount = actualFrameCount
         this.honeybees = honeybees
+        this.nfcID = nfcID
     }
 
     constructor()
