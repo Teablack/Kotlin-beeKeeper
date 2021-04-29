@@ -88,11 +88,9 @@ class MainActivity : AppCompatActivity() {
                     Thread.sleep(1000);
                 }
                 runOnUiThread() {
-//                    val intent = Intent(this, MainActivity::class.java)
-//
-//                    intent.putExtra("userIN", username_str)
-//                    intent.putExtra("userID", user_exists)
-//                    startActivity(intent)
+                    val intent = Intent(this, NfcActivity::class.java)
+                    intent.putExtra("userID", userID)
+                    startActivity(intent)
                     this.onPause()
                 }
             }.start()

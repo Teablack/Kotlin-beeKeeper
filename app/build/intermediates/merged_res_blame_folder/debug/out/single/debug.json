@@ -4,12 +4,12 @@
         "source": "C:\\Users\\Daria\\Desktop\\git\\Kotlin-beeKeeper\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher.png"
     },
     {
-        "merged": "C:\\Users\\Daria\\Desktop\\git\\Kotlin-beeKeeper\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_ic_launcher_background.png.flat",
-        "source": "C:\\Users\\Daria\\Desktop\\git\\Kotlin-beeKeeper\\app\\build\\generated\\res\\pngs\\debug\\drawable-xhdpi\\ic_launcher_background.png"
-    },
-    {
         "merged": "C:\\Users\\Daria\\Desktop\\git\\Kotlin-beeKeeper\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_hive_view.xml.flat",
         "source": "C:\\Users\\Daria\\Desktop\\git\\Kotlin-beeKeeper\\app\\src\\main\\res\\layout\\activity_hive_view.xml"
+    },
+    {
+        "merged": "C:\\Users\\Daria\\Desktop\\git\\Kotlin-beeKeeper\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_ic_launcher_background.png.flat",
+        "source": "C:\\Users\\Daria\\Desktop\\git\\Kotlin-beeKeeper\\app\\build\\generated\\res\\pngs\\debug\\drawable-xhdpi\\ic_launcher_background.png"
     },
     {
         "merged": "C:\\Users\\Daria\\Desktop\\git\\Kotlin-beeKeeper\\app\\build\\intermediates\\res\\merged\\debug\\drawable-anydpi-v24_ic_launcher_foreground.xml.flat",
@@ -18,6 +18,10 @@
     {
         "merged": "C:\\Users\\Daria\\Desktop\\git\\Kotlin-beeKeeper\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_login.xml.flat",
         "source": "C:\\Users\\Daria\\Desktop\\git\\Kotlin-beeKeeper\\app\\src\\main\\res\\layout\\activity_login.xml"
+    },
+    {
+        "merged": "C:\\Users\\Daria\\Desktop\\git\\Kotlin-beeKeeper\\app\\build\\intermediates\\res\\merged\\debug\\navigation_nav_graph.xml.flat",
+        "source": "C:\\Users\\Daria\\Desktop\\git\\Kotlin-beeKeeper\\app\\src\\main\\res\\navigation\\nav_graph.xml"
     },
     {
         "merged": "C:\\Users\\Daria\\Desktop\\git\\Kotlin-beeKeeper\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_ic_launcher_background.png.flat",
@@ -106,6 +110,10 @@
     {
         "merged": "C:\\Users\\Daria\\Desktop\\git\\Kotlin-beeKeeper\\app\\build\\intermediates\\res\\merged\\debug\\drawable-anydpi-v21_ic_menu_camera.xml.flat",
         "source": "C:\\Users\\Daria\\Desktop\\git\\Kotlin-beeKeeper\\app\\build\\generated\\res\\pngs\\debug\\drawable-anydpi-v21\\ic_menu_camera.xml"
+    },
+    {
+        "merged": "C:\\Users\\Daria\\Desktop\\git\\Kotlin-beeKeeper\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_nfc.xml.flat",
+        "source": "C:\\Users\\Daria\\Desktop\\git\\Kotlin-beeKeeper\\app\\src\\main\\res\\layout\\activity_nfc.xml"
     },
     {
         "merged": "C:\\Users\\Daria\\Desktop\\git\\Kotlin-beeKeeper\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_hive_list.xml.flat",

@@ -53,7 +53,7 @@ class ApiaryList : AppCompatActivity(), AdapterView.OnItemClickListener {
                 runOnUiThread() {
                     val intent = Intent(this, ApiaryView::class.java)
                     intent.putExtra("userID", userID)
-                    intent.putExtra("isnew", "new")
+                    intent.putExtra("apiaryID", "new")
                     startActivity(intent)
                     this.onPause()
                 }

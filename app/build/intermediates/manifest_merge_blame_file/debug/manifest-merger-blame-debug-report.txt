@@ -25,99 +25,118 @@
 15    <uses-permission android:name="android.permission.INTERNET" />
 15-->C:\Users\Daria\Desktop\git\Kotlin-beeKeeper\app\src\main\AndroidManifest.xml:9:5-67
 15-->C:\Users\Daria\Desktop\git\Kotlin-beeKeeper\app\src\main\AndroidManifest.xml:9:22-64
-16
-17    <application
-17-->C:\Users\Daria\Desktop\git\Kotlin-beeKeeper\app\src\main\AndroidManifest.xml:11:5-48:19
-18        android:allowBackup="true"
-18-->C:\Users\Daria\Desktop\git\Kotlin-beeKeeper\app\src\main\AndroidManifest.xml:12:9-35
-19        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
-19-->[androidx.core:core:1.3.2] C:\Users\Daria\.gradle\caches\transforms-2\files-2.1\f4726924add2327517ec5f23b6aa3aba\core-1.3.2\AndroidManifest.xml:24:18-86
-20        android:debuggable="true"
-21        android:icon="@mipmap/ic_launcher"
-21-->C:\Users\Daria\Desktop\git\Kotlin-beeKeeper\app\src\main\AndroidManifest.xml:13:9-43
-22        android:label="@string/app_name"
-22-->C:\Users\Daria\Desktop\git\Kotlin-beeKeeper\app\src\main\AndroidManifest.xml:14:9-41
-23        android:roundIcon="@mipmap/ic_launcher_round"
-23-->C:\Users\Daria\Desktop\git\Kotlin-beeKeeper\app\src\main\AndroidManifest.xml:15:9-54
-24        android:supportsRtl="true"
-24-->C:\Users\Daria\Desktop\git\Kotlin-beeKeeper\app\src\main\AndroidManifest.xml:16:9-35
-25        android:testOnly="true"
-26        android:theme="@style/Theme.BeeKeeper" >
-26-->C:\Users\Daria\Desktop\git\Kotlin-beeKeeper\app\src\main\AndroidManifest.xml:17:9-47
-27        <activity
-27-->C:\Users\Daria\Desktop\git\Kotlin-beeKeeper\app\src\main\AndroidManifest.xml:18:9-20:25
-28            android:name="com.example.beekeeper.HiveView"
-28-->C:\Users\Daria\Desktop\git\Kotlin-beeKeeper\app\src\main\AndroidManifest.xml:18:19-43
-29            android:theme="@style/Theme.BeeKeeper.NoActionBar" />
-29-->C:\Users\Daria\Desktop\git\Kotlin-beeKeeper\app\src\main\AndroidManifest.xml:19:13-63
-30        <activity
-30-->C:\Users\Daria\Desktop\git\Kotlin-beeKeeper\app\src\main\AndroidManifest.xml:21:9-23:15
-31            android:name="com.example.beekeeper.HiveList"
-31-->C:\Users\Daria\Desktop\git\Kotlin-beeKeeper\app\src\main\AndroidManifest.xml:21:19-43
-32            android:theme="@style/Theme.BeeKeeper.NoActionBar" />
-32-->C:\Users\Daria\Desktop\git\Kotlin-beeKeeper\app\src\main\AndroidManifest.xml:22:13-63
-33        <activity
-33-->C:\Users\Daria\Desktop\git\Kotlin-beeKeeper\app\src\main\AndroidManifest.xml:24:9-26:66
-34            android:name="com.example.beekeeper.ApiaryView"
-34-->C:\Users\Daria\Desktop\git\Kotlin-beeKeeper\app\src\main\AndroidManifest.xml:25:13-39
-35            android:theme="@style/Theme.BeeKeeper.NoActionBar" />
+16    <uses-permission android:name="android.permission.NFC" />
+16-->C:\Users\Daria\Desktop\git\Kotlin-beeKeeper\app\src\main\AndroidManifest.xml:10:5-62
+16-->C:\Users\Daria\Desktop\git\Kotlin-beeKeeper\app\src\main\AndroidManifest.xml:10:22-59
+17
+18    <uses-feature
+18-->C:\Users\Daria\Desktop\git\Kotlin-beeKeeper\app\src\main\AndroidManifest.xml:12:5-14:35
+19        android:name="android.hardware.nfc"
+19-->C:\Users\Daria\Desktop\git\Kotlin-beeKeeper\app\src\main\AndroidManifest.xml:13:9-44
+20        android:required="true" />
+20-->C:\Users\Daria\Desktop\git\Kotlin-beeKeeper\app\src\main\AndroidManifest.xml:14:9-32
+21
+22    <application
+22-->C:\Users\Daria\Desktop\git\Kotlin-beeKeeper\app\src\main\AndroidManifest.xml:16:5-58:19
+23        android:allowBackup="true"
+23-->C:\Users\Daria\Desktop\git\Kotlin-beeKeeper\app\src\main\AndroidManifest.xml:17:9-35
+24        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+24-->[androidx.core:core:1.3.2] C:\Users\Daria\.gradle\caches\transforms-2\files-2.1\f4726924add2327517ec5f23b6aa3aba\core-1.3.2\AndroidManifest.xml:24:18-86
+25        android:debuggable="true"
+26        android:icon="@mipmap/ic_launcher"
+26-->C:\Users\Daria\Desktop\git\Kotlin-beeKeeper\app\src\main\AndroidManifest.xml:18:9-43
+27        android:label="@string/app_name"
+27-->C:\Users\Daria\Desktop\git\Kotlin-beeKeeper\app\src\main\AndroidManifest.xml:19:9-41
+28        android:roundIcon="@mipmap/ic_launcher_round"
+28-->C:\Users\Daria\Desktop\git\Kotlin-beeKeeper\app\src\main\AndroidManifest.xml:20:9-54
+29        android:supportsRtl="true"
+29-->C:\Users\Daria\Desktop\git\Kotlin-beeKeeper\app\src\main\AndroidManifest.xml:21:9-35
+30        android:testOnly="true"
+31        android:theme="@style/Theme.BeeKeeper" >
+31-->C:\Users\Daria\Desktop\git\Kotlin-beeKeeper\app\src\main\AndroidManifest.xml:22:9-47
+32        <activity
+32-->C:\Users\Daria\Desktop\git\Kotlin-beeKeeper\app\src\main\AndroidManifest.xml:23:9-27:20
+33            android:name="com.example.beekeeper.NfcActivity"
+33-->C:\Users\Daria\Desktop\git\Kotlin-beeKeeper\app\src\main\AndroidManifest.xml:24:13-40
+34            android:label="@string/title_activity_nfc"
+34-->C:\Users\Daria\Desktop\git\Kotlin-beeKeeper\app\src\main\AndroidManifest.xml:25:13-55
+35            android:theme="@style/Theme.BeeKeeper.NoActionBar" >
 35-->C:\Users\Daria\Desktop\git\Kotlin-beeKeeper\app\src\main\AndroidManifest.xml:26:13-63
-36        <activity
-36-->C:\Users\Daria\Desktop\git\Kotlin-beeKeeper\app\src\main\AndroidManifest.xml:27:9-29:66
-37            android:name="com.example.beekeeper.ApiaryList"
-37-->C:\Users\Daria\Desktop\git\Kotlin-beeKeeper\app\src\main\AndroidManifest.xml:28:13-39
-38            android:theme="@style/Theme.BeeKeeper.NoActionBar" />
-38-->C:\Users\Daria\Desktop\git\Kotlin-beeKeeper\app\src\main\AndroidManifest.xml:29:13-63
-39        <activity
-39-->C:\Users\Daria\Desktop\git\Kotlin-beeKeeper\app\src\main\AndroidManifest.xml:30:9-33:66
-40            android:name="com.example.beekeeper.MainActivity"
-40-->C:\Users\Daria\Desktop\git\Kotlin-beeKeeper\app\src\main\AndroidManifest.xml:31:13-41
-41            android:label="@string/title_activity_main"
-41-->C:\Users\Daria\Desktop\git\Kotlin-beeKeeper\app\src\main\AndroidManifest.xml:32:13-56
+36        </activity>
+37        <activity
+37-->C:\Users\Daria\Desktop\git\Kotlin-beeKeeper\app\src\main\AndroidManifest.xml:28:9-30:66
+38            android:name="com.example.beekeeper.HiveView"
+38-->C:\Users\Daria\Desktop\git\Kotlin-beeKeeper\app\src\main\AndroidManifest.xml:29:13-37
+39            android:theme="@style/Theme.BeeKeeper.NoActionBar" />
+39-->C:\Users\Daria\Desktop\git\Kotlin-beeKeeper\app\src\main\AndroidManifest.xml:30:13-63
+40        <activity
+40-->C:\Users\Daria\Desktop\git\Kotlin-beeKeeper\app\src\main\AndroidManifest.xml:31:9-33:66
+41            android:name="com.example.beekeeper.HiveList"
+41-->C:\Users\Daria\Desktop\git\Kotlin-beeKeeper\app\src\main\AndroidManifest.xml:32:13-37
 42            android:theme="@style/Theme.BeeKeeper.NoActionBar" />
 42-->C:\Users\Daria\Desktop\git\Kotlin-beeKeeper\app\src\main\AndroidManifest.xml:33:13-63
 43        <activity
 43-->C:\Users\Daria\Desktop\git\Kotlin-beeKeeper\app\src\main\AndroidManifest.xml:34:9-36:66
-44            android:name="com.example.beekeeper.login.LoginActivity"
-44-->C:\Users\Daria\Desktop\git\Kotlin-beeKeeper\app\src\main\AndroidManifest.xml:35:13-48
+44            android:name="com.example.beekeeper.ApiaryView"
+44-->C:\Users\Daria\Desktop\git\Kotlin-beeKeeper\app\src\main\AndroidManifest.xml:35:13-39
 45            android:theme="@style/Theme.BeeKeeper.NoActionBar" />
 45-->C:\Users\Daria\Desktop\git\Kotlin-beeKeeper\app\src\main\AndroidManifest.xml:36:13-63
 46        <activity
-46-->C:\Users\Daria\Desktop\git\Kotlin-beeKeeper\app\src\main\AndroidManifest.xml:37:9-47:20
-47            android:name="com.example.beekeeper.FullscreenActivity"
-47-->C:\Users\Daria\Desktop\git\Kotlin-beeKeeper\app\src\main\AndroidManifest.xml:38:13-47
-48            android:configChanges="orientation|keyboardHidden|screenSize"
-48-->C:\Users\Daria\Desktop\git\Kotlin-beeKeeper\app\src\main\AndroidManifest.xml:39:13-74
-49            android:label="@string/app_name"
-49-->C:\Users\Daria\Desktop\git\Kotlin-beeKeeper\app\src\main\AndroidManifest.xml:40:13-45
-50            android:theme="@style/Theme.BeeKeeper.Fullscreen" >
-50-->C:\Users\Daria\Desktop\git\Kotlin-beeKeeper\app\src\main\AndroidManifest.xml:41:13-62
-51            <intent-filter>
-51-->C:\Users\Daria\Desktop\git\Kotlin-beeKeeper\app\src\main\AndroidManifest.xml:42:13-46:29
-52                <action android:name="android.intent.action.MAIN" />
-52-->C:\Users\Daria\Desktop\git\Kotlin-beeKeeper\app\src\main\AndroidManifest.xml:43:17-69
-52-->C:\Users\Daria\Desktop\git\Kotlin-beeKeeper\app\src\main\AndroidManifest.xml:43:25-66
-53
-54                <category android:name="android.intent.category.LAUNCHER" />
-54-->C:\Users\Daria\Desktop\git\Kotlin-beeKeeper\app\src\main\AndroidManifest.xml:45:17-77
-54-->C:\Users\Daria\Desktop\git\Kotlin-beeKeeper\app\src\main\AndroidManifest.xml:45:27-74
-55            </intent-filter>
-56        </activity>
-57        <activity
-57-->[com.google.android.gms:play-services-base:17.0.0] C:\Users\Daria\.gradle\caches\transforms-2\files-2.1\cdf864275c184c60f06f04cb3ac23c07\jetified-play-services-base-17.0.0\AndroidManifest.xml:23:9-26:75
-58            android:name="com.google.android.gms.common.api.GoogleApiActivity"
-58-->[com.google.android.gms:play-services-base:17.0.0] C:\Users\Daria\.gradle\caches\transforms-2\files-2.1\cdf864275c184c60f06f04cb3ac23c07\jetified-play-services-base-17.0.0\AndroidManifest.xml:24:13-79
-59            android:exported="false"
-59-->[com.google.android.gms:play-services-base:17.0.0] C:\Users\Daria\.gradle\caches\transforms-2\files-2.1\cdf864275c184c60f06f04cb3ac23c07\jetified-play-services-base-17.0.0\AndroidManifest.xml:25:13-37
-60            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
-60-->[com.google.android.gms:play-services-base:17.0.0] C:\Users\Daria\.gradle\caches\transforms-2\files-2.1\cdf864275c184c60f06f04cb3ac23c07\jetified-play-services-base-17.0.0\AndroidManifest.xml:26:13-72
-61
-62        <meta-data
-62-->[com.google.android.gms:play-services-basement:17.0.0] C:\Users\Daria\.gradle\caches\transforms-2\files-2.1\f52c80684120c0271e5b122890277bf0\jetified-play-services-basement-17.0.0\AndroidManifest.xml:23:9-25:69
-63            android:name="com.google.android.gms.version"
-63-->[com.google.android.gms:play-services-basement:17.0.0] C:\Users\Daria\.gradle\caches\transforms-2\files-2.1\f52c80684120c0271e5b122890277bf0\jetified-play-services-basement-17.0.0\AndroidManifest.xml:24:13-58
-64            android:value="@integer/google_play_services_version" />
-64-->[com.google.android.gms:play-services-basement:17.0.0] C:\Users\Daria\.gradle\caches\transforms-2\files-2.1\f52c80684120c0271e5b122890277bf0\jetified-play-services-basement-17.0.0\AndroidManifest.xml:25:13-66
-65    </application>
-66
-67</manifest>
+46-->C:\Users\Daria\Desktop\git\Kotlin-beeKeeper\app\src\main\AndroidManifest.xml:37:9-39:66
+47            android:name="com.example.beekeeper.ApiaryList"
+47-->C:\Users\Daria\Desktop\git\Kotlin-beeKeeper\app\src\main\AndroidManifest.xml:38:13-39
+48            android:theme="@style/Theme.BeeKeeper.NoActionBar" />
+48-->C:\Users\Daria\Desktop\git\Kotlin-beeKeeper\app\src\main\AndroidManifest.xml:39:13-63
+49        <activity
+49-->C:\Users\Daria\Desktop\git\Kotlin-beeKeeper\app\src\main\AndroidManifest.xml:40:9-43:66
+50            android:name="com.example.beekeeper.MainActivity"
+50-->C:\Users\Daria\Desktop\git\Kotlin-beeKeeper\app\src\main\AndroidManifest.xml:41:13-41
+51            android:label="@string/title_activity_main"
+51-->C:\Users\Daria\Desktop\git\Kotlin-beeKeeper\app\src\main\AndroidManifest.xml:42:13-56
+52            android:theme="@style/Theme.BeeKeeper.NoActionBar" />
+52-->C:\Users\Daria\Desktop\git\Kotlin-beeKeeper\app\src\main\AndroidManifest.xml:43:13-63
+53        <activity
+53-->C:\Users\Daria\Desktop\git\Kotlin-beeKeeper\app\src\main\AndroidManifest.xml:44:9-46:66
+54            android:name="com.example.beekeeper.login.LoginActivity"
+54-->C:\Users\Daria\Desktop\git\Kotlin-beeKeeper\app\src\main\AndroidManifest.xml:45:13-48
+55            android:theme="@style/Theme.BeeKeeper.NoActionBar" />
+55-->C:\Users\Daria\Desktop\git\Kotlin-beeKeeper\app\src\main\AndroidManifest.xml:46:13-63
+56        <activity
+56-->C:\Users\Daria\Desktop\git\Kotlin-beeKeeper\app\src\main\AndroidManifest.xml:47:9-57:20
+57            android:name="com.example.beekeeper.FullscreenActivity"
+57-->C:\Users\Daria\Desktop\git\Kotlin-beeKeeper\app\src\main\AndroidManifest.xml:48:13-47
+58            android:configChanges="orientation|keyboardHidden|screenSize"
+58-->C:\Users\Daria\Desktop\git\Kotlin-beeKeeper\app\src\main\AndroidManifest.xml:49:13-74
+59            android:label="@string/app_name"
+59-->C:\Users\Daria\Desktop\git\Kotlin-beeKeeper\app\src\main\AndroidManifest.xml:50:13-45
+60            android:theme="@style/Theme.BeeKeeper.Fullscreen" >
+60-->C:\Users\Daria\Desktop\git\Kotlin-beeKeeper\app\src\main\AndroidManifest.xml:51:13-62
+61            <intent-filter>
+61-->C:\Users\Daria\Desktop\git\Kotlin-beeKeeper\app\src\main\AndroidManifest.xml:52:13-56:29
+62                <action android:name="android.intent.action.MAIN" />
+62-->C:\Users\Daria\Desktop\git\Kotlin-beeKeeper\app\src\main\AndroidManifest.xml:53:17-69
+62-->C:\Users\Daria\Desktop\git\Kotlin-beeKeeper\app\src\main\AndroidManifest.xml:53:25-66
+63
+64                <category android:name="android.intent.category.LAUNCHER" />
+64-->C:\Users\Daria\Desktop\git\Kotlin-beeKeeper\app\src\main\AndroidManifest.xml:55:17-77
+64-->C:\Users\Daria\Desktop\git\Kotlin-beeKeeper\app\src\main\AndroidManifest.xml:55:27-74
+65            </intent-filter>
+66        </activity>
+67        <activity
+67-->[com.google.android.gms:play-services-base:17.0.0] C:\Users\Daria\.gradle\caches\transforms-2\files-2.1\cdf864275c184c60f06f04cb3ac23c07\jetified-play-services-base-17.0.0\AndroidManifest.xml:23:9-26:75
+68            android:name="com.google.android.gms.common.api.GoogleApiActivity"
+68-->[com.google.android.gms:play-services-base:17.0.0] C:\Users\Daria\.gradle\caches\transforms-2\files-2.1\cdf864275c184c60f06f04cb3ac23c07\jetified-play-services-base-17.0.0\AndroidManifest.xml:24:13-79
+69            android:exported="false"
+69-->[com.google.android.gms:play-services-base:17.0.0] C:\Users\Daria\.gradle\caches\transforms-2\files-2.1\cdf864275c184c60f06f04cb3ac23c07\jetified-play-services-base-17.0.0\AndroidManifest.xml:25:13-37
+70            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+70-->[com.google.android.gms:play-services-base:17.0.0] C:\Users\Daria\.gradle\caches\transforms-2\files-2.1\cdf864275c184c60f06f04cb3ac23c07\jetified-play-services-base-17.0.0\AndroidManifest.xml:26:13-72
+71
+72        <meta-data
+72-->[com.google.android.gms:play-services-basement:17.0.0] C:\Users\Daria\.gradle\caches\transforms-2\files-2.1\f52c80684120c0271e5b122890277bf0\jetified-play-services-basement-17.0.0\AndroidManifest.xml:23:9-25:69
+73            android:name="com.google.android.gms.version"
+73-->[com.google.android.gms:play-services-basement:17.0.0] C:\Users\Daria\.gradle\caches\transforms-2\files-2.1\f52c80684120c0271e5b122890277bf0\jetified-play-services-basement-17.0.0\AndroidManifest.xml:24:13-58
+74            android:value="@integer/google_play_services_version" />
+74-->[com.google.android.gms:play-services-basement:17.0.0] C:\Users\Daria\.gradle\caches\transforms-2\files-2.1\f52c80684120c0271e5b122890277bf0\jetified-play-services-basement-17.0.0\AndroidManifest.xml:25:13-66
+75    </application>
+76
+77</manifest>

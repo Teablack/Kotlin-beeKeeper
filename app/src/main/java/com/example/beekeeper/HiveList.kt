@@ -58,7 +58,7 @@ class HiveList : AppCompatActivity(), AdapterView.OnItemClickListener {
                     val intent = Intent(this, HiveView::class.java)
                     intent.putExtra("userID", userID)
                     intent.putExtra("apiaryID", apiaryID)
-                    intent.putExtra("isnew", "new")
+                    intent.putExtra("hiveID","new")
                     startActivity(intent)
                     this.onPause()
                 }

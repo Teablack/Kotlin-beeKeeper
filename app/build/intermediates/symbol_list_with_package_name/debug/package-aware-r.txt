@@ -1785,6 +1785,7 @@ id BOTTOM_END
 id BOTTOM_START
 id CTRL
 id FUNCTION
+id FirstFragment
 id META
 id NO_DEBUG
 id QueenPersonality
@@ -1793,6 +1794,7 @@ id SHOW_ALL
 id SHOW_PATH
 id SHOW_PROGRESS
 id SYM
+id SecondFragment
 id TOP_END
 id TOP_START
 id accelerate
@@ -1829,6 +1831,8 @@ id accessibility_custom_action_6
 id accessibility_custom_action_7
 id accessibility_custom_action_8
 id accessibility_custom_action_9
+id action_FirstFragment_to_SecondFragment
+id action_SecondFragment_to_FirstFragment
 id action_bar
 id action_bar_activity_content
 id action_bar_container
@@ -2079,12 +2083,14 @@ id mtrl_picker_title_text
 id mtrl_view_tag_bottom_padding
 id multiply
 id nav_controller_view_tag
+id nav_graph
 id nav_host_fragment_container
 id navigation_header_container
 id never
 id newApiary
 id newHive
 id nfc
+id nfcToolbar
 id noScroll
 id none
 id normal
@@ -2325,6 +2331,7 @@ layout activity_hive_list
 layout activity_hive_view
 layout activity_login
 layout activity_main
+layout activity_nfc
 layout apiary_adapter
 layout custom_dialog
 layout design_bottom_navigation_item
@@ -2414,6 +2421,7 @@ menu main
 mipmap ic_launcher
 mipmap ic_launcher_round
 navigation mobile_navigation
+navigation nav_graph
 plurals mtrl_badge_content_description
 string abc_action_bar_home_description
 string abc_action_bar_up_description
@@ -2476,6 +2484,9 @@ string error_icon_content_description
 string exposed_dropdown_menu_content_description
 string fab_transformation_scrim_behavior
 string fab_transformation_sheet_behavior
+string first_fragment_label
+string hello_first_fragment
+string hello_second_fragment
 string hide_bottom_view_on_scroll_behavior
 string icon_content_description
 string item_view_role_description
@@ -2531,14 +2542,18 @@ string mtrl_picker_toggle_to_text_input_mode
 string mtrl_picker_toggle_to_year_selection
 string nav_app_bar_navigate_up_description
 string nav_app_bar_open_drawer_description
+string next
 string password_toggle_content_description
 string path_password_eye
 string path_password_eye_mask_strike_through
 string path_password_eye_mask_visible
 string path_password_strike_through
+string previous
 string search_menu_title
+string second_fragment_label
 string status_bar_notification_info_overflow
 string title_activity_main
+string title_activity_nfc
 style AlertDialog_AppCompat
 style AlertDialog_AppCompat_Light
 style AndroidThemeColorAccentYellow
