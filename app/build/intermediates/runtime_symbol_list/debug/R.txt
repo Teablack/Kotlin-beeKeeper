@@ -1986,7 +1986,7 @@ int id hiveNameText 0x7f0800cb
 int id hiveQueen 0x7f0800cc
 int id hiveType 0x7f0800cd
 int id hivelistView 0x7f0800ce
-int id hivetoolbar2 0x7f0800cf
+int id hiveviewtoolbar 0x7f0800cf
 int id home 0x7f0800d0
 int id homeAsUp 0x7f0800d1
 int id honeybees 0x7f0800d2

@@ -20,13 +20,13 @@ import com.google.android.material.floatingactionbutton.FloatingActionButton
 class ApiaryList : AppCompatActivity(), AdapterView.OnItemClickListener {
     lateinit var listView_details: ListView
     var arrayList_details :ArrayList<Apiary> = ArrayList();
-
+    lateinit var userID: String
     @RequiresApi(Build.VERSION_CODES.LOLLIPOP)
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_apiary_list)
         val dbHelper = DBHelper(this)
-        val userID = intent.extras!!.getString("userID").toString()
+        userID = intent.extras!!.getString("userID").toString()
         val newApiaryButton = findViewById<FloatingActionButton>(R.id.newApiary)
         val apiarytoolbar = findViewById<Toolbar>(R.id.apiaryListToolbar)
 
@@ -84,15 +84,17 @@ class ApiaryList : AppCompatActivity(), AdapterView.OnItemClickListener {
     }
 
     override fun onItemClick(parent: AdapterView<*>?, view: View?, position: Int, id: Long) {
-        //Log.d("TAGG", "ONITEMCLICK")
+
         Thread() {
             run {
                 Thread.sleep(1000);
+                Log.d("TAGG", arrayList_details[position].apiaryID.toString())
             }
             runOnUiThread() {
-                val userID = arrayList_details[position].apiaryID ;
+                val apiaryID = arrayList_details[position].apiaryID.toString() ;
                 val intent = Intent(this, HiveList::class.java)
-                intent.putExtra("apiaryID", position)
+                intent.putExtra("apiaryID", apiaryID)
+                intent.putExtra("userID", userID)
                 startActivity(intent)
                 this.onPause()
             }

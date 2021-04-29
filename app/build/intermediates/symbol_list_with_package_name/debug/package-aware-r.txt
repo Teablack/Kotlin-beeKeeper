@@ -1987,7 +1987,7 @@ id hiveNameText
 id hiveQueen
 id hiveType
 id hivelistView
-id hivetoolbar2
+id hiveviewtoolbar
 id home
 id homeAsUp
 id honeybees

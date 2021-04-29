@@ -66,7 +66,7 @@ class LoginActivity : AppCompatActivity() {
                             runOnUiThread() {
                                 val intent = Intent(this, MainActivity::class.java)
                                 var userID = dbHelper.findIdByName(username_str)
-                                intent.putExtra("userIN", username_str)
+                                intent.putExtra("username", username_str)
                                 intent.putExtra("userID", userID)
                                 startActivity(intent)
                                 this.onPause()

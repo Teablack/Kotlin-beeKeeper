@@ -44,8 +44,9 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        loggedUser = intent.extras!!.getString("userIN").toString()
+        loggedUser = intent.extras!!.getString("username").toString()
         userID = intent.extras!!.getString("userID").toString()
+
         greeting = findViewById<TextView>(R.id.greeting)
         timezoneText = findViewById<TextView>(R.id.textLocation)
         tempText = findViewById<TextView>(R.id.textTempMax)
@@ -72,6 +73,8 @@ class MainActivity : AppCompatActivity() {
                 runOnUiThread() {
                     val intent = Intent(this, ApiaryList::class.java)
                     intent.putExtra("userID", userID)
+                    intent.putExtra("username", loggedUser)
+
                     startActivity(intent)
                     this.onPause()
                 }

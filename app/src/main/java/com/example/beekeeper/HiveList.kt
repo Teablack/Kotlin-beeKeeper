@@ -17,13 +17,18 @@ class HiveList : AppCompatActivity(), AdapterView.OnItemClickListener {
 
     lateinit var listView_details: ListView
     var arrayList_details :ArrayList<Hive> = ArrayList();
+
+    lateinit var userID : String
+    lateinit var apiaryID : String
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_hive_list)
         val dbHelper = DBHelper(this)
-        val userID = intent.extras!!.getString("userID").toString()
 
-        val apiaryID = intent.extras!!.getString("apiaryID").toString()
+        userID = intent.extras!!.getString("userID").toString()
+        apiaryID = intent.extras!!.getString("apiaryID").toString()
+
         val newHiveButton = findViewById<FloatingActionButton>(R.id.newHive)
         val hivetoolbar = findViewById<Toolbar>(R.id.hiveListToolbar)
         val editApiary = findViewById<ImageButton>(R.id.editApiary)
@@ -52,7 +57,7 @@ class HiveList : AppCompatActivity(), AdapterView.OnItemClickListener {
                 runOnUiThread() {
                     val intent = Intent(this, HiveView::class.java)
                     intent.putExtra("userID", userID)
-                    intent.putExtra("apiaryID", userID)
+                    intent.putExtra("apiaryID", apiaryID)
                     intent.putExtra("isnew", "new")
                     startActivity(intent)
                     this.onPause()
@@ -60,6 +65,7 @@ class HiveList : AppCompatActivity(), AdapterView.OnItemClickListener {
             }.start()
         }
 
+        //cofamy sie
         hivetoolbar.setNavigationOnClickListener() {
             Thread() {
                 run {
@@ -68,6 +74,7 @@ class HiveList : AppCompatActivity(), AdapterView.OnItemClickListener {
                 runOnUiThread() {
                     val intent = Intent(this, ApiaryList::class.java)
                     intent.putExtra("userID", userID)
+
                     startActivity(intent)
                     this.onPause()
                 }
@@ -83,7 +90,7 @@ class HiveList : AppCompatActivity(), AdapterView.OnItemClickListener {
                 runOnUiThread() {
                     val intent = Intent(this, ApiaryView::class.java)
                     intent.putExtra("userID", userID)
-                    intent.putExtra("apiaryID", userID)
+                    intent.putExtra("apiaryID", apiaryID)
                     startActivity(intent)
                     this.onPause()
                 }
@@ -97,11 +104,13 @@ class HiveList : AppCompatActivity(), AdapterView.OnItemClickListener {
                 Thread.sleep(1000);
             }
             runOnUiThread() {
-//                val userID = arrayList_details[position].apiaryID ;
-//                val intent = Intent(this, HiveView::class.java)
-//                intent.putExtra("apiaryID", position)
-//                startActivity(intent)
-//                this.onPause()
+                val hiveID = arrayList_details[position].hiveID ;
+                val intent = Intent(this, HiveView::class.java)
+                intent.putExtra("apiaryID", apiaryID)
+                intent.putExtra("userID", userID)
+                intent.putExtra("hiveID",hiveID)
+                startActivity(intent)
+                this.onPause()
             }
         }.start()
     }
