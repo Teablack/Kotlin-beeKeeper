@@ -1787,6 +1787,7 @@ id CTRL
 id FUNCTION
 id META
 id NO_DEBUG
+id QueenPersonality
 id SHIFT
 id SHOW_ALL
 id SHOW_PATH
@@ -1848,6 +1849,7 @@ id action_settings
 id action_text
 id actions
 id activity_chooser_view_content
+id actualFrameCount
 id add
 id adjust_height
 id adjust_width
@@ -1963,6 +1965,7 @@ id flip
 id floating
 id forever
 id fragment_container_view_tag
+id frameCount
 id fullscreen_content
 id ghost_view
 id ghost_view_holder
@@ -1977,11 +1980,17 @@ id guideline
 id header_title
 id hideable
 id hiveAdapter
+id hiveButton
 id hiveListToolbar
 id hiveName
+id hiveNameText
+id hiveQueen
+id hiveType
 id hivelistView
+id hivetoolbar2
 id home
 id homeAsUp
+id honeybees
 id honorRequest
 id icon
 id iconWeather
@@ -2197,6 +2206,13 @@ id textTempMax
 id textTop
 id textView
 id textView2
+id textView3
+id textView4
+id textView5
+id textView6
+id textView7
+id textView8
+id textView9
 id textWindSpeed
 id text_input_end_icon
 id text_input_error_icon
@@ -2306,6 +2322,7 @@ layout activity_apiary
 layout activity_apiary_list
 layout activity_fullscreen
 layout activity_hive_list
+layout activity_hive_view
 layout activity_login
 layout activity_main
 layout apiary_adapter

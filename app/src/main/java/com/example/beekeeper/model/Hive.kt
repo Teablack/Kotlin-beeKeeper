@@ -13,8 +13,15 @@ class Hive {
     lateinit var honeybees :String
 
 
-    constructor(apiaryID: String, hiveID: String?, hiveName:String, hiveType:String, queenbee:String,queenPersonality:String,frameCount:String,actualFrameCount:String,honeybees:String) {
-        this.apiaryID = apiaryID
+    constructor(
+        apiaryID: String?, hiveID: String?, hiveName:String, hiveType:String, queenbee:String,
+        queenPersonality:String,
+        frameCount:String,
+        actualFrameCount:String,
+        honeybees:String) {
+        if (apiaryID != null) {
+            this.apiaryID = apiaryID
+        }
         if (hiveID != null) {
             this.hiveID = hiveID
         }

@@ -15,10 +15,15 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.BeeKeeper">
-        <activity android:name=".HiveList"></activity>
+        <activity android:name=".HiveView"
+            android:theme="@style/Theme.BeeKeeper.NoActionBar"
+            ></activity>
+        <activity android:name=".HiveList"
+            android:theme="@style/Theme.BeeKeeper.NoActionBar"
+            />
         <activity
             android:name=".ApiaryView"
-            android:theme="@style/Theme.BeeKeeper.NoActionBar"></activity>
+            android:theme="@style/Theme.BeeKeeper.NoActionBar" />
         <activity
             android:name=".ApiaryList"
             android:theme="@style/Theme.BeeKeeper.NoActionBar" />

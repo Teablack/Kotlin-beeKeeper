@@ -39,7 +39,7 @@ class ApiaryView : AppCompatActivity() {
                     dbHelper.addApiary(apiary)
                 }
                 runOnUiThread() {
-                    val intent = Intent(this, ApiaryList::class.java)
+                    //val intent = Intent(this, ApiaryList::class.java)
                     intent.putExtra("userID", userID)
                     startActivity(intent)
                     this.onPause()
