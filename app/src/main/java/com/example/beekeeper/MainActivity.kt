@@ -13,7 +13,9 @@ import androidx.appcompat.app.AlertDialog
 
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.appcompat.app.AppCompatActivity
+import androidx.appcompat.widget.Toolbar
 import androidx.core.app.ActivityCompat
+import com.example.beekeeper.login.LoginActivity
 import com.google.android.gms.location.FusedLocationProviderClient
 import com.google.android.gms.location.LocationServices
 import okhttp3.*
@@ -43,6 +45,8 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
+        val mainToolbar = findViewById<Toolbar>(R.id.mainToolbar)
 
         loggedUser = intent.extras!!.getString("username").toString()
         userID = intent.extras!!.getString("userID").toString()
@@ -94,6 +98,26 @@ class MainActivity : AppCompatActivity() {
                     this.onPause()
                 }
             }.start()
+        }
+
+        //wylogujemy sie
+        mainToolbar.setNavigationOnClickListener() {
+            Thread() {
+                run {
+                    Thread.sleep(1000);
+                }
+                runOnUiThread() {
+
+                    val intent = Intent(this, LoginActivity::class.java)
+                    var sharedPref = this.getSharedPreferences("com.example.beekeeper.shared",0)
+                    var islogged = sharedPref.edit()
+                    islogged.putBoolean("islogged",false)
+                    islogged.apply()
+                    startActivity(intent)
+                    this.onPause()
+                }
+            }.start()
+
         }
     }
     fun run(url: String) {

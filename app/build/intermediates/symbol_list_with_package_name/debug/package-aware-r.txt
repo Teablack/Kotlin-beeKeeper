@@ -1785,7 +1785,6 @@ id BOTTOM_END
 id BOTTOM_START
 id CTRL
 id FUNCTION
-id FirstFragment
 id META
 id NO_DEBUG
 id QueenPersonality
@@ -1794,7 +1793,6 @@ id SHOW_ALL
 id SHOW_PATH
 id SHOW_PROGRESS
 id SYM
-id SecondFragment
 id TOP_END
 id TOP_START
 id accelerate
@@ -1831,8 +1829,6 @@ id accessibility_custom_action_6
 id accessibility_custom_action_7
 id accessibility_custom_action_8
 id accessibility_custom_action_9
-id action_FirstFragment_to_SecondFragment
-id action_SecondFragment_to_FirstFragment
 id action_bar
 id action_bar_activity_content
 id action_bar_container
@@ -1997,7 +1993,6 @@ id homeAsUp
 id honeybees
 id honorRequest
 id icon
-id iconWeather
 id iconWind
 id icon_group
 id icon_only
@@ -2027,6 +2022,7 @@ id list_item
 id loginButton
 id loginText
 id logo
+id mainToolbar
 id masked
 id material_clock_display
 id material_clock_face

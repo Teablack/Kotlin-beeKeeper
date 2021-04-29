@@ -8,6 +8,19 @@
     android:orientation="vertical"
     tools:context=".MainActivity">
 
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/mainToolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="0dp"
+        android:background="?attr/colorPrimary"
+        android:gravity="top"
+        android:isScrollContainer="false"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:navigationContentDescription="Apiary"
+        app:navigationIcon="@android:drawable/ic_lock_power_off"
+        tools:ignore="MissingConstraints" />
 
     <TextView
         android:id="@+id/greeting"
@@ -48,13 +61,6 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp">
-
-                <ImageView
-                    android:id="@+id/iconWeather"
-                    android:layout_width="40dp"
-                    android:layout_height="40dp"
-                    android:layout_centerVertical="true"
-                    android:src="@mipmap/ic_launcher" />
 
                 <TextView
                     android:id="@+id/textAirPressure"

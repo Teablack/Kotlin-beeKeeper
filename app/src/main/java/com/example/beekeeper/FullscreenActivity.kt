@@ -26,23 +26,28 @@ class FullscreenActivity : AppCompatActivity() {
                 if(islogged){
                     runOnUiThread(){
                         val username_str = sharedPref.getString("username","")
-
+                        Log.d("!!!!!TAGG", username_str.toString())
                         val intent = Intent(this, MainActivity::class.java)
                         val dbHelper = DBHelper(this)
                         var userID = dbHelper.findIdByName(username_str.toString())
-                        intent.putExtra("userIN", username_str)
+                        intent.putExtra("username", username_str)
                         intent.putExtra("userID", userID)
+                        startActivity(intent)
+                        Log.d("!!!!!TAGG", "po start intent")
+                        finish()
+                    }
+                }
+                else {
+
+                    runOnUiThread(){
+                        val intent = Intent(this, LoginActivity::class.java)
                         startActivity(intent)
                         finish()
                     }
                 }
 
             }
-            runOnUiThread(){
-                val intent = Intent(this, LoginActivity::class.java)
-                startActivity(intent)
-                finish()
-            }
+
         }.start()
     }
 }
