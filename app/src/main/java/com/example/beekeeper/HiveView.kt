@@ -36,10 +36,13 @@ class HiveView : AppCompatActivity() {
         val deleteHive = findViewById<Button>(R.id.deleteHive)
 
         val hivetoolbar = findViewById<Toolbar>(R.id.hiveviewtoolbar)
-
+        var nfcID: String  = ""
 
         if(hiveID.equals("new")){
             hiveButton.text="Utwórz nowy ul"
+        }
+        else if (hiveID.equals("newnfc")){
+            nfcID = intent.extras!!.getString("nfcID").toString()
         }
         else {
             hiveButton.text="Modyfikuj"
@@ -60,7 +63,7 @@ class HiveView : AppCompatActivity() {
 
 
                     if(hiveID.equals("new")){
-                        val hive = Hive( apiaryID,null, hiveNameText,hiveTypeText,hiveQueentext,queenPersonalityText,frameCountText, actualFrameCountText,honeybeesText , "")
+                        val hive = Hive( apiaryID,null, hiveNameText,hiveTypeText,hiveQueentext,queenPersonalityText,frameCountText, actualFrameCountText,honeybeesText , nfcID)
                         dbHelper.addHive(hive)
                     }
                     else {

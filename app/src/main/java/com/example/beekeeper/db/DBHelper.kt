@@ -64,6 +64,64 @@ class DBHelper(var context: Context) : SQLiteOpenHelper(
         onCreate(db!!)
     }
 
+    //znajdz apiary u usera z taka nazwa ktora ma inne id
+    fun findApiary(apiaryName: String, userID : String , apiaryID: String) : Boolean{
+        val db = this.readableDatabase
+        val query = "Select * from $TABLE2_NAME WHERE $COL_NAME LIKE \"$apiaryName\" AND $COL_AP_ID LIKE \"$apiaryID\" AND $COL_USER_ID NOT LIKE \"$userID\""
+        val result = db.rawQuery(query, null)
+        if (result.moveToFirst()) {
+            if (result.getString(result.getColumnIndex(COL_NAME)) == apiaryName) {
+                db.close()
+                return true
+            }
+        }
+        db.close()
+        return false
+
+    }
+
+    fun findHiveByNfcId(nfcID: String) : Boolean {
+        val db = this.readableDatabase
+        val query = "Select * from $TABLE3_NAME WHERE $COL_NFC LIKE \"$nfcID\""
+        val result = db.rawQuery(query, null)
+        if (result.moveToFirst()) {
+            if (result.getString(result.getColumnIndex(COL_NFC)) == nfcID) {
+                db.close()
+                return true
+            }
+        }
+        db.close()
+        return false
+    }
+
+    fun findHiveID(nfcID: String) : String{
+        val db = this.readableDatabase
+        val query = "Select * from $TABLE3_NAME WHERE $COL_NFC LIKE \"$nfcID\""
+        val result = db.rawQuery(query, null)
+        result.moveToFirst()
+        db.close()
+        return result.getColumnIndex(COL_HIVE_ID).toString()
+
+    }
+
+    fun findApiaryID(nfcID: String) : String{
+        val db = this.readableDatabase
+        val query = "Select * from $TABLE3_NAME WHERE $COL_NFC LIKE \"$nfcID\""
+        val result = db.rawQuery(query, null)
+        result.moveToFirst()
+        db.close()
+        return result.getColumnIndex(COL_APIARY_ID).toString()
+
+    }
+
+    fun findApiaryByName(apiaryName: String, userID : String ) : String {
+        val db = this.readableDatabase
+        val query = "Select * from $TABLE2_NAME WHERE $COL_NAME LIKE \"$apiaryName\" AND $COL_USER_ID LIKE \"$userID\""
+        val result = db.rawQuery(query, null)
+        result.moveToFirst()
+        db.close()
+        return result.getColumnIndex(COL_AP_ID).toString()
+    }
 
     fun findUserByName(username: String): Boolean {
         val db = this.readableDatabase
@@ -122,9 +180,7 @@ class DBHelper(var context: Context) : SQLiteOpenHelper(
         newValues.put(COL_AC_FRAME, hive.actualFrameCount)
         newValues.put(COL_HONEYBEES, hive.honeybees)
         newValues.put(COL_NFC, hive.nfcID)
-
         db.update(TABLE3_NAME, newValues, "$COL_AP_ID='${hive.hiveID}'", null)
-
         db.close()
     }
 
