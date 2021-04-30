@@ -3,6 +3,7 @@ package com.example.beekeeper
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import android.view.View
 import android.widget.Button
 import android.widget.TextView
@@ -62,7 +63,7 @@ class HiveView : AppCompatActivity() {
                     var honeybeesText = honeybees.text.toString()
 
 
-                    if(hiveID.equals("new")){
+                    if(hiveID.equals("new") || hiveID.equals("newnfc")  ){
                         val hive = Hive( apiaryID,null, hiveNameText,hiveTypeText,hiveQueentext,queenPersonalityText,frameCountText, actualFrameCountText,honeybeesText , nfcID)
                         dbHelper.addHive(hive)
                     }

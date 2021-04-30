@@ -100,7 +100,7 @@ class DBHelper(var context: Context) : SQLiteOpenHelper(
         val result = db.rawQuery(query, null)
         result.moveToFirst()
         db.close()
-        return result.getColumnIndex(COL_HIVE_ID).toString()
+        return result.getString(result.getColumnIndex(COL_HIVE_ID))
 
     }
 
@@ -110,7 +110,7 @@ class DBHelper(var context: Context) : SQLiteOpenHelper(
         val result = db.rawQuery(query, null)
         result.moveToFirst()
         db.close()
-        return result.getColumnIndex(COL_APIARY_ID).toString()
+        return result.getString(result.getColumnIndex(COL_APIARY_ID))
 
     }
 
@@ -119,8 +119,9 @@ class DBHelper(var context: Context) : SQLiteOpenHelper(
         val query = "Select * from $TABLE2_NAME WHERE $COL_NAME LIKE \"$apiaryName\" AND $COL_USER_ID LIKE \"$userID\""
         val result = db.rawQuery(query, null)
         result.moveToFirst()
+        val id = result.getString(result.getColumnIndex(COL_AP_ID))
         db.close()
-        return result.getColumnIndex(COL_AP_ID).toString()
+        return id
     }
 
     fun findUserByName(username: String): Boolean {

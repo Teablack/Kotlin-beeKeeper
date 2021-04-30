@@ -99,14 +99,14 @@ class NfcActivity : AppCompatActivity() {
             val tag: Tag = (intent.getParcelableExtra<Parcelable>(NfcAdapter.EXTRA_TAG) as Tag?)!!
             val dbHelper = DBHelper(this)
 
-            val payload = tag.id.toString()
+            val payload = toDec(tag.id).toString()
             if (payload != null) {
                 Log.d("TAFF", payload)
                 val hive = dbHelper.findHiveByNfcId(payload)
                 if(hive) {
                     Thread() {
                         run {
-                            Thread.sleep(1000);
+                            Thread.sleep(1000);e
                         }
                         runOnUiThread() {
                             val apiaryID = dbHelper.findHiveID(payload)
@@ -147,14 +147,16 @@ class NfcActivity : AppCompatActivity() {
                             }
 
                             builder2.setItems(array2.toTypedArray()){ _, which2 ->
-
-                                val selectedApiary = arrayList_details[which2]
-                                var apiaryID = dbHelper.findApiaryByName(selectedApiary.toString(), userID)
                                 Thread() {
                                     run {
                                         Thread.sleep(1000);
                                     }
                                     runOnUiThread() {
+                                        val selectedApiary = array2[which2]
+                                        var apiaryID = dbHelper.findApiaryByName(selectedApiary, userID)
+                                        Log.d("APIARYNAME",selectedApiary)
+                                        Log.d("APIARYID",apiaryID)
+
                                         val intent = Intent(this, HiveView::class.java)
                                         intent.putExtra("userID", userID)
                                         intent.putExtra("apiaryID",apiaryID)
@@ -167,6 +169,7 @@ class NfcActivity : AppCompatActivity() {
                             }
                             val dialog2 = builder2.create()
                             dialog2.show()
+
                         }
                         else if(selected =="Modyfikuj"){
 
