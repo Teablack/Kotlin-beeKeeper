@@ -106,7 +106,7 @@ class NfcActivity : AppCompatActivity() {
                 if(hive) {
                     Thread() {
                         run {
-                            Thread.sleep(1000);e
+                            Thread.sleep(1000);
                         }
                         runOnUiThread() {
                             val apiaryID = dbHelper.findHiveID(payload)
