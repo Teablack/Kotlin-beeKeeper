@@ -109,9 +109,11 @@ class NfcActivity : AppCompatActivity() {
                             Thread.sleep(1000);
                         }
                         runOnUiThread() {
-                            val apiaryID = dbHelper.findHiveID(payload)
-                            val hiveID = dbHelper.findApiaryID(payload)
+                            val apiaryID = dbHelper.findApiaryID(payload)
+                            val hiveID = dbHelper.findHiveID(payload)
 
+                            Log.d("apiaryID",apiaryID)
+                            Log.d("hiveID",hiveID)
                             val intent = Intent(this, HiveView::class.java)
                             intent.putExtra("apiaryID", apiaryID)
                             intent.putExtra("userID", userID)

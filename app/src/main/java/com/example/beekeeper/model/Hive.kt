@@ -4,14 +4,14 @@ class Hive {
 
     lateinit var apiaryID:String
     var hiveID: String? =null
-    lateinit var hiveName:String
-    lateinit var hiveType:String
-    lateinit var queenbee :String
-    lateinit var queenPersonality :String
-    lateinit var frameCount :String
-    lateinit var actualFrameCount :String
-    lateinit var honeybees :String
-    lateinit var nfcID:String
+    var hiveName:String ?= null
+    var hiveType:String ?= null
+    var queenbee :String ?= null
+    var queenPersonality :String ?= null
+    var frameCount :String ?= null
+    var actualFrameCount :String ?= null
+    var honeybees :String ?= null
+    var nfcID:String ?= null
 
 
     constructor(

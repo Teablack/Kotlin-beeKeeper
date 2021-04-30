@@ -46,8 +46,22 @@ class HiveView : AppCompatActivity() {
             nfcID = intent.extras!!.getString("nfcID").toString()
         }
         else {
-            hiveButton.text="Modyfikuj"
-            deleteHive.setVisibility(View.VISIBLE);
+            runOnUiThread() {
+                nfcID = intent.extras!!.getString("nfcID").toString()
+                var hive = Hive()
+                hive = dbHelper.findHiveByID(hiveID)
+                Log.d("dfsff", hive.hiveType.toString())
+                hiveName.text = hive.hiveName
+                hiveType.text = hive.hiveType
+                hiveQueen.text = hive.queenbee
+                queenPersonality.text = hive.queenPersonality
+                frameCount.text = hive.frameCount
+                actualFrameCount.text = hive.actualFrameCount
+                honeybees.text = hive.honeybees
+
+                hiveButton.text = "Modyfikuj"
+                deleteHive.setVisibility(View.VISIBLE);
+            }
         }
         //dodanie nowego ula- dodac weryfikacje wprowadzonych danych
         hiveButton.setOnClickListener(){
@@ -68,7 +82,7 @@ class HiveView : AppCompatActivity() {
                         dbHelper.addHive(hive)
                     }
                     else {
-                        val hive = Hive( apiaryID,hiveID, hiveNameText,hiveTypeText,hiveQueentext,queenPersonalityText,frameCountText, actualFrameCountText,honeybeesText , "")
+                        val hive = Hive( apiaryID,hiveID, hiveNameText,hiveTypeText,hiveQueentext,queenPersonalityText,frameCountText, actualFrameCountText,honeybeesText , nfcID)
                         dbHelper.updateHive(hive)
                     }
                 }

@@ -4,6 +4,7 @@ import android.content.ContentValues
 import android.content.Context
 import android.database.sqlite.SQLiteDatabase
 import android.database.sqlite.SQLiteOpenHelper
+import android.util.Log
 import com.example.beekeeper.model.Apiary
 import com.example.beekeeper.model.Hive
 import com.example.beekeeper.model.User
@@ -92,6 +93,26 @@ class DBHelper(var context: Context) : SQLiteOpenHelper(
         }
         db.close()
         return false
+    }
+
+    fun findHiveByID(hiveID: String) : Hive {
+        val db = this.readableDatabase
+        val query = "Select * from $TABLE3_NAME WHERE $COL_HIVE_ID LIKE \"$hiveID\""
+        val result = db.rawQuery(query, null)
+        result.moveToFirst()
+        var hive = Hive()
+        hive.hiveName =  result.getString(result.getColumnIndex(COL_HIVE_NAME))
+        hive.hiveType =  result.getString(result.getColumnIndex(COL_TYPE))
+
+        hive.queenbee =  result.getString(result.getColumnIndex(COL_QUEEN_BEE))
+        hive.queenPersonality =  result.getString(result.getColumnIndex(COL_PERSONALITY))
+
+        hive.frameCount =  result.getString(result.getColumnIndex(COL_FRAME))
+        hive.actualFrameCount =  result.getString(result.getColumnIndex(COL_AC_FRAME))
+        hive.honeybees =  result.getString(result.getColumnIndex(COL_HONEYBEES))
+        Log.d("FMKKMF",hive.hiveType.toString() )
+        db.close()
+        return hive
     }
 
     fun findHiveID(nfcID: String) : String{
