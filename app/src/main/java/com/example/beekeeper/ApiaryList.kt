@@ -88,7 +88,7 @@ class ApiaryList : AppCompatActivity(), AdapterView.OnItemClickListener {
         Thread() {
             run {
                 Thread.sleep(1000);
-                Log.d("TAGG", arrayList_details[position].apiaryID.toString())
+                //Log.d("TAGG", arrayList_details[position].apiaryID.toString())
             }
             runOnUiThread() {
                 val apiaryID = arrayList_details[position].apiaryID.toString() ;

@@ -101,10 +101,10 @@ class NfcActivity : AppCompatActivity() {
 
             val payload = toDec(tag.id).toString()
             if (payload != null) {
-                Log.d("TAFF", payload)
+
                 val hive = dbHelper.findHiveByNfcId(payload)
                 //czy istnieje hive z takim nfcID
-                Log.d("TAFF", hive.toString())
+
                 if(hive) {
                     Thread() {
                         run {
@@ -114,8 +114,6 @@ class NfcActivity : AppCompatActivity() {
                             val apiaryID = dbHelper.findApiaryID(payload)
                             val hiveID = dbHelper.findHiveID(payload)
 
-                            Log.d("apiaryID",apiaryID)
-                            Log.d("hiveID",hiveID)
                             val intent = Intent(this, HiveView::class.java)
                             intent.putExtra("apiaryID", apiaryID)
                             intent.putExtra("userID", userID)
@@ -129,7 +127,7 @@ class NfcActivity : AppCompatActivity() {
                 }
                 else{
 
-                    val array = arrayOf("Nowy","Modyfikuj","Cofnij")
+                    val array = arrayOf("Nowy","Cofnij")
 
                     val array2: MutableList<String> = ArrayList()
                     val builder = AlertDialog.Builder(this)
@@ -158,8 +156,6 @@ class NfcActivity : AppCompatActivity() {
                                     runOnUiThread() {
                                         val selectedApiary = array2[which2]
                                         var apiaryID = dbHelper.findApiaryByName(selectedApiary, userID)
-                                        Log.d("APIARYNAME",selectedApiary)
-                                        Log.d("APIARYID",apiaryID)
 
                                         val intent = Intent(this, HiveView::class.java)
                                         intent.putExtra("userID", userID)
@@ -175,9 +171,7 @@ class NfcActivity : AppCompatActivity() {
                             dialog2.show()
 
                         }
-                        else if(selected =="Modyfikuj"){
 
-                        }
                     }
 
 

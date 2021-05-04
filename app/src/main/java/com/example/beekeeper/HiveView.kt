@@ -50,7 +50,6 @@ class HiveView : AppCompatActivity() {
                 nfcID = intent.extras!!.getString("nfcID").toString()
                 var hive = Hive()
                 hive = dbHelper.findHiveByID(hiveID)
-                Log.d("dfsff", hive.hiveType.toString())
                 hiveName.text = hive.hiveName
                 hiveType.text = hive.hiveType
                 hiveQueen.text = hive.queenbee
@@ -82,10 +81,6 @@ class HiveView : AppCompatActivity() {
                         dbHelper.addHive(hive)
                     }
                     else {
-                        Log.d("UPDATE",apiaryID)
-                        Log.d("UPDATE",hiveID)
-                        Log.d("UPDATE",hiveNameText)
-                        Log.d("UPDATE",nfcID)
 
                         val hive = Hive( apiaryID,hiveID, hiveNameText,hiveTypeText,hiveQueentext,queenPersonalityText,frameCountText, actualFrameCountText,honeybeesText , nfcID)
                         dbHelper.updateHive(hive)

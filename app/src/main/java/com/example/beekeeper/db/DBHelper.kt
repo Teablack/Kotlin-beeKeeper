@@ -110,7 +110,7 @@ class DBHelper(var context: Context) : SQLiteOpenHelper(
         hive.frameCount =  result.getString(result.getColumnIndex(COL_FRAME))
         hive.actualFrameCount =  result.getString(result.getColumnIndex(COL_AC_FRAME))
         hive.honeybees =  result.getString(result.getColumnIndex(COL_HONEYBEES))
-        Log.d("FMKKMF",hive.hiveType.toString() )
+
         db.close()
         return hive
     }

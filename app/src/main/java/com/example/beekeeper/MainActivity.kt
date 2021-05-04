@@ -130,7 +130,6 @@ class MainActivity : AppCompatActivity() {
 
             override fun onResponse(call: Call, response: Response) {
                 var str_response = response.body()!!.string()
-                Log.d("TAG", str_response )
                 //creating json object
                 val json_contact: JSONObject = JSONObject(str_response)
 

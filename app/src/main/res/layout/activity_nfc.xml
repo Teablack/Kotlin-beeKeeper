@@ -24,6 +24,13 @@
             app:navigationIcon="?attr/actionModeCloseDrawable"
             tools:ignore="MissingConstraints" />
 
+        <TextView
+            android:id="@+id/textView10"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="Przylóż telefon do karty " />
+
     </LinearLayout>
 
 
