@@ -103,6 +103,8 @@ class NfcActivity : AppCompatActivity() {
             if (payload != null) {
                 Log.d("TAFF", payload)
                 val hive = dbHelper.findHiveByNfcId(payload)
+                //czy istnieje hive z takim nfcID
+                Log.d("TAFF", hive.toString())
                 if(hive) {
                     Thread() {
                         run {

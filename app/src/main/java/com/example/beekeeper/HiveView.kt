@@ -82,6 +82,11 @@ class HiveView : AppCompatActivity() {
                         dbHelper.addHive(hive)
                     }
                     else {
+                        Log.d("UPDATE",apiaryID)
+                        Log.d("UPDATE",hiveID)
+                        Log.d("UPDATE",hiveNameText)
+                        Log.d("UPDATE",nfcID)
+
                         val hive = Hive( apiaryID,hiveID, hiveNameText,hiveTypeText,hiveQueentext,queenPersonalityText,frameCountText, actualFrameCountText,honeybeesText , nfcID)
                         dbHelper.updateHive(hive)
                     }

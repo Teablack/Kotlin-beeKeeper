@@ -183,6 +183,8 @@ class DBHelper(var context: Context) : SQLiteOpenHelper(
         db.close()
     }
 
+
+
     fun deleteApiary(apiaryID : String) {
         val db = this.readableDatabase
         db.delete(TABLE2_NAME, "$COL_AP_ID='${apiaryID}'", null)
@@ -193,6 +195,8 @@ class DBHelper(var context: Context) : SQLiteOpenHelper(
     fun updateHive(hive : Hive) {
         val db = this.readableDatabase
         val newValues = ContentValues()
+        newValues.put(COL_APIARY_ID, hive.apiaryID)
+        newValues.put(COL_HIVE_ID, hive.hiveID)
         newValues.put(COL_HIVE_NAME, hive.hiveName)
         newValues.put(COL_TYPE, hive.hiveType)
         newValues.put(COL_QUEEN_BEE, hive.queenbee)
@@ -202,9 +206,10 @@ class DBHelper(var context: Context) : SQLiteOpenHelper(
         newValues.put(COL_AC_FRAME, hive.actualFrameCount)
         newValues.put(COL_HONEYBEES, hive.honeybees)
         newValues.put(COL_NFC, hive.nfcID)
-        db.update(TABLE3_NAME, newValues, "$COL_AP_ID='${hive.hiveID}'", null)
+        db.update(TABLE3_NAME, newValues, "$COL_HIVE_ID='${hive.hiveID}'", null)
         db.close()
     }
+
 
     fun deleteHive(hiveID : String) {
         val db = this.readableDatabase
