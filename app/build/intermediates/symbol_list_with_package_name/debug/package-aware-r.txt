@@ -2208,6 +2208,7 @@ id textStart
 id textTempMax
 id textTop
 id textView
+id textView10
 id textView2
 id textView3
 id textView4
