@@ -28,6 +28,7 @@
             android:id="@+id/editApiary"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:background="@color/light_blue_A200"
             app:srcCompat="@android:drawable/ic_menu_edit" />
 
         <ListView
@@ -38,7 +39,6 @@
         </ListView>
 
     </LinearLayout>
-
 
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
@@ -54,6 +54,7 @@
         android:layout_marginBottom="66dp"
         android:clickable="true"
         android:foregroundGravity="bottom|right"
+        app:backgroundTint="#DA3503"
         app:flow_horizontalAlign="end"
         app:flow_verticalAlign="bottom"
         app:layout_anchorGravity="bottom|right|end"

@@ -46,6 +46,8 @@ class HiveView : AppCompatActivity() {
             nfcID = intent.extras!!.getString("nfcID").toString()
         }
         else {
+            hiveButton.text="Modyfikuj"
+            deleteHive.text="Usuń pasiekę"
             runOnUiThread() {
                 nfcID = intent.extras!!.getString("nfcID").toString()
                 var hive = Hive()

@@ -36,7 +36,6 @@
     </LinearLayout>
 
 
-
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/newApiary"
         android:layout_width="56dp"
@@ -50,6 +49,7 @@
         android:layout_marginBottom="66dp"
         android:clickable="true"
         android:foregroundGravity="bottom|right"
+        app:backgroundTint="#DA3503"
         app:flow_horizontalAlign="end"
         app:flow_verticalAlign="bottom"
         app:layout_anchorGravity="bottom|right|end"

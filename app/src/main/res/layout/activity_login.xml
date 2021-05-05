@@ -6,67 +6,79 @@
     android:layout_height="match_parent"
     tools:context=".login.LoginActivity">
 
-    <LinearLayout
+    <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:foregroundGravity="center|center_horizontal"
-        android:gravity="center|center_horizontal"
-        android:orientation="vertical"
-        app:layout_constraintTop_toTopOf="parent">
+        android:layout_height="wrap_content"
+        android:layout_margin="2dp"
+        app:cardCornerRadius="16dp"
+        app:contentPadding="16dp"
+        tools:layout_editor_absoluteX="-13dp"
+        tools:layout_editor_absoluteY="83dp">
 
-        <TextView
-            android:id="@+id/loginText"
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Logowanie"
-            android:textSize="24sp"
-            android:textStyle="bold" />
-
-        <TextView
-            android:id="@+id/userText1"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Login:" />
-
-        <EditText
-            android:id="@+id/userInput"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:ems="10"
-            android:inputType="textPersonName"
-            android:text="" />
-
-        <TextView
-            android:id="@+id/passwordText1"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Hasło:" />
-
-        <EditText
-            android:id="@+id/passwordInput"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:ems="10"
-            android:inputType="textPassword" />
-
-        <Button
-            android:id="@+id/loginButton"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Zaloguj się" />
-
-        <TextView
-            android:id="@+id/or"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
+            android:foregroundGravity="center|center_horizontal"
             android:gravity="center|center_horizontal"
-            android:text="albo" />
+            android:orientation="vertical">
 
-        <Button
-            android:id="@+id/registerButton"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Zarejestruj się" />
+            <TextView
+                android:id="@+id/loginText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Logowanie"
+                android:textSize="24sp"
+                android:textStyle="bold" />
 
-    </LinearLayout>
+            <TextView
+                android:id="@+id/userText1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Login:" />
+
+            <EditText
+                android:id="@+id/userInput"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:text="" />
+
+            <TextView
+                android:id="@+id/passwordText1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Hasło:" />
+
+            <EditText
+                android:id="@+id/passwordInput"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="textPassword" />
+
+            <Button
+                android:id="@+id/loginButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Zaloguj się"
+                app:cornerRadius="16dp" />
+
+            <TextView
+                android:id="@+id/or"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center|center_horizontal"
+                android:text="albo" />
+
+            <Button
+                android:id="@+id/registerButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Zarejestruj się"
+                app:cornerRadius="16dp" />
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
 </androidx.constraintlayout.widget.ConstraintLayout>
