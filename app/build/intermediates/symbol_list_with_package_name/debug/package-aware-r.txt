@@ -2418,6 +2418,8 @@ menu activity_main_drawer
 menu main
 mipmap ic_launcher
 mipmap ic_launcher_round
+mipmap logo_round2
+mipmap photo
 navigation mobile_navigation
 navigation nav_graph
 plurals mtrl_badge_content_description

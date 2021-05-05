@@ -760,21 +760,6 @@
             ]
         },
         {
-            "outputFile": "C:\\Users\\Daria\\Desktop\\git\\Kotlin-beeKeeper\\app\\build\\intermediates\\res\\merged\\debug\\values-h550dp-port-v13_values-h550dp-port-v13.arsc.flat",
-            "map": [
-                {
-                    "source": "C:\\Users\\Daria\\.gradle\\caches\\transforms-2\\files-2.1\\10a1fd9a43e78ddadba51799567f760e\\material-1.3.0\\res\\values-h550dp-port-v13\\values-h550dp-port-v13.xml",
-                    "from": {
-                        "startLines": "2,3",
-                        "startColumns": "4,4",
-                        "startOffsets": "55,107",
-                        "endColumns": "51,76",
-                        "endOffsets": "102,179"
-                    }
-                }
-            ]
-        },
-        {
             "outputFile": "C:\\Users\\Daria\\Desktop\\git\\Kotlin-beeKeeper\\app\\build\\intermediates\\res\\merged\\debug\\values-si_values-si.arsc.flat",
             "map": [
                 {
@@ -879,6 +864,21 @@
                         "startOffsets": "10238",
                         "endColumns": "100",
                         "endOffsets": "10334"
+                    }
+                }
+            ]
+        },
+        {
+            "outputFile": "C:\\Users\\Daria\\Desktop\\git\\Kotlin-beeKeeper\\app\\build\\intermediates\\res\\merged\\debug\\values-h550dp-port-v13_values-h550dp-port-v13.arsc.flat",
+            "map": [
+                {
+                    "source": "C:\\Users\\Daria\\.gradle\\caches\\transforms-2\\files-2.1\\10a1fd9a43e78ddadba51799567f760e\\material-1.3.0\\res\\values-h550dp-port-v13\\values-h550dp-port-v13.xml",
+                    "from": {
+                        "startLines": "2,3",
+                        "startColumns": "4,4",
+                        "startOffsets": "55,107",
+                        "endColumns": "51,76",
+                        "endOffsets": "102,179"
                     }
                 }
             ]
@@ -2343,11 +2343,11 @@
                 {
                     "source": "C:\\Users\\Daria\\Desktop\\git\\Kotlin-beeKeeper\\app\\src\\main\\res\\values\\colors.xml",
                     "from": {
-                        "startLines": "-1,-1,9,-1,11,-1,-1,-1,-1,-1,-1,-1",
-                        "startColumns": "-1,-1,4,-1,4,-1,-1,-1,-1,-1,-1,-1",
-                        "startOffsets": "-1,-1,369,-1,469,-1,-1,-1,-1,-1,-1,-1",
-                        "endColumns": "-1,-1,48,-1,49,-1,-1,-1,-1,-1,-1,-1",
-                        "endOffsets": "-1,-1,413,-1,514,-1,-1,-1,-1,-1,-1,-1"
+                        "startLines": "-1,-1,-1,-1,-1,12,-1,-1,-1,-1,-1,-1",
+                        "startColumns": "-1,-1,-1,-1,-1,4,-1,-1,-1,-1,-1,-1",
+                        "startOffsets": "-1,-1,-1,-1,-1,520,-1,-1,-1,-1,-1,-1",
+                        "endColumns": "-1,-1,-1,-1,-1,49,-1,-1,-1,-1,-1,-1",
+                        "endOffsets": "-1,-1,-1,-1,-1,565,-1,-1,-1,-1,-1,-1"
                     },
                     "to": {
                         "startLines": "405,406,472,473,474,475,506,507,508,519,520,523",

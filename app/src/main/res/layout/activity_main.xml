@@ -31,7 +31,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="16dp"
-        app:cardBackgroundColor="#FF4800"
+        app:cardBackgroundColor="#EE5300"
         app:cardCornerRadius="16dp"
         app:contentPadding="16dp">
 
@@ -127,7 +127,7 @@
                 android:layout_margin="16dp"
                 android:layout_weight="1"
                 android:text="Pasieki"
-                app:backgroundTint="#FF4800"
+                app:backgroundTint="#EE5300"
                 app:cornerRadius="16dp" />
 
             <Button
@@ -137,7 +137,7 @@
                 android:layout_margin="16dp"
                 android:layout_weight="1"
                 android:text="NFC"
-                app:backgroundTint="#FF4800"
+                app:backgroundTint="#EE5300"
                 app:cornerRadius="16dp" />
         </LinearLayout>
 
