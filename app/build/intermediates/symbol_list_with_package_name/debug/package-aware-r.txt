@@ -1994,7 +1994,6 @@ id homeAsUp
 id honeybees
 id honorRequest
 id icon
-id iconWind
 id icon_group
 id icon_only
 id ifRoom
